@@ -390,9 +390,50 @@
             }
         }
 
+        function renderBalancedScorecard(bsc) {
+            if (!bsc) return '';
+            
+            const perspectivas = ['financiera', 'clientes', 'procesos_internos', 'aprendizaje'];
+            
+            return `
+                <div style="margin: 40px 0; padding: 30px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); border-radius: 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.1);">
+                    <h2 style="text-align: center; color: #333; margin-bottom: 30px; font-size: 2em;">
+                        📊 Balanced Scorecard - 4 Perspectivas
+                    </h2>
+                    
+                    ${perspectivas.map(p => {
+                        const persp = bsc[p];
+                        if (!persp) return '';
+                        
+                        return `
+                            <div style="margin: 25px 0; padding: 25px; background: white; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                                <h3 style="color: #667eea; margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                                    <span style="font-size: 1.5em;">${persp.icono}</span>
+                                    ${persp.nombre}
+                                </h3>
+                                <div class="stats-grid">
+                                    ${persp.metricas.map(m => `
+                                        <div class="stat-card" style="background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%); border-left: 4px solid #667eea;">
+                                            <div class="stat-value" style="font-size: 1.8em; color: #667eea;">${m.valor}</div>
+                                            <div class="stat-label" style="font-size: 0.9em; margin: 8px 0;">${m.indicador}</div>
+                                            <div style="color: ${m.variacion.includes('+') ? '#10b981' : '#ef4444'}; font-weight: 600; font-size: 1em;">
+                                                ${m.variacion.includes('-') && !m.indicador.includes('Reducción') && !m.indicador.includes('Tiempo') ? '⚠️' : '✅'} ${m.variacion}
+                                            </div>
+                                        </div>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+            `;
+        }
+
         function renderIAGenerativa(data) {
             return `
                 <h2 class="section-title">🤖 ${data.titulo}</h2>
+                
+                ${renderBalancedScorecard(data.balanced_scorecard)}
                 
                 <h3 style="margin-top: 30px;">Chatbot de Ventas</h3>
                 <div class="stats-grid">
@@ -464,6 +505,8 @@
             const pred = data.prediccion_ventas;
             return `
                 <h2 class="section-title">📊 ${data.titulo}</h2>
+                
+                ${renderBalancedScorecard(data.balanced_scorecard)}
                 
                 <h3 style="margin-top: 30px;">Predicción de Ventas</h3>
                 <div class="stats-grid">
@@ -539,6 +582,8 @@
         function renderOmnicanal(data) {
             return `
                 <h2 class="section-title">🌐 ${data.titulo}</h2>
+                
+                ${renderBalancedScorecard(data.balanced_scorecard)}
                 
                 <h3 style="margin-top: 30px;">Rendimiento por Canal</h3>
                 <div class="chart-container">
@@ -625,6 +670,8 @@
         function renderSostenibilidad(data) {
             return `
                 <h2 class="section-title">♻️ ${data.titulo}</h2>
+                
+                ${renderBalancedScorecard(data.balanced_scorecard)}
                 
                 <h3 style="margin-top: 30px;">Métricas ESG</h3>
                 

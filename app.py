@@ -19,7 +19,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    """Página principal"""
+    """Página principal - Innovaciones 2025"""
+    return render_template('completo.html')
+
+@app.route('/simulador')
+def simulador():
+    """Página de simulador interactivo"""
     return render_template('index.html')
 
 @app.route('/api/ia-generativa')
@@ -27,6 +32,48 @@ def api_ia_generativa():
     """API para IA Generativa"""
     data = {
         "titulo": "IA Generativa para Ventas y Marketing",
+        "balanced_scorecard": {
+            "financiera": {
+                "nombre": "Perspectiva Financiera",
+                "metricas": [
+                    {"indicador": "ROI de IA Generativa", "valor": f"{random.randint(350, 500)}%", "variacion": f"+{random.randint(100, 180)}%"},
+                    {"indicador": "Reducción de Costos Marketing", "valor": f"${random.randint(150, 250)}K", "variacion": f"-{random.randint(35, 50)}%"},
+                    {"indicador": "Incremento de Ventas", "valor": f"+{random.randint(25, 40)}%", "variacion": f"+{random.randint(15, 25)}%"},
+                    {"indicador": "Margen de Contribución", "valor": f"{random.randint(45, 65)}%", "variacion": f"+{random.randint(12, 18)}%"}
+                ],
+                "icono": "💰"
+            },
+            "clientes": {
+                "nombre": "Perspectiva de Clientes",
+                "metricas": [
+                    {"indicador": "Satisfacción del Cliente (NPS)", "valor": random.randint(75, 90), "variacion": f"+{random.randint(15, 25)} pts"},
+                    {"indicador": "Tasa de Conversión", "valor": f"{random.randint(35, 48)}%", "variacion": f"+{random.randint(18, 28)}%"},
+                    {"indicador": "Tasa de Retención", "valor": f"{random.randint(80, 92)}%", "variacion": f"+{random.randint(10, 20)}%"},
+                    {"indicador": "Personalización de Ofertas", "valor": f"{random.randint(85, 95)}%", "variacion": f"+{random.randint(40, 60)}%"}
+                ],
+                "icono": "👥"
+            },
+            "procesos_internos": {
+                "nombre": "Perspectiva de Procesos Internos",
+                "metricas": [
+                    {"indicador": "Tiempo de Respuesta", "valor": f"{random.randint(5, 15)} seg", "variacion": f"-{random.randint(70, 85)}%"},
+                    {"indicador": "Consultas Automatizadas", "valor": f"{random.randint(80, 95)}%", "variacion": f"+{random.randint(65, 80)}%"},
+                    {"indicador": "Contenido Generado/Día", "valor": random.randint(50, 120), "variacion": f"+{random.randint(300, 500)}%"},
+                    {"indicador": "Calidad de Contenido (Score)", "valor": f"{random.randint(85, 95)}/100", "variacion": f"+{random.randint(20, 30)} pts"}
+                ],
+                "icono": "⚙️"
+            },
+            "aprendizaje": {
+                "nombre": "Perspectiva de Aprendizaje y Crecimiento",
+                "metricas": [
+                    {"indicador": "Empleados Capacitados en IA", "valor": f"{random.randint(75, 95)}%", "variacion": f"+{random.randint(60, 85)}%"},
+                    {"indicador": "Horas de Capacitación", "valor": f"{random.randint(40, 80)}h/año", "variacion": f"+{random.randint(150, 250)}%"},
+                    {"indicador": "Modelos IA Implementados", "valor": random.randint(5, 8), "variacion": f"+{random.randint(3, 5)} nuevos"},
+                    {"indicador": "Satisfacción del Equipo", "valor": f"{random.randint(82, 92)}%", "variacion": f"+{random.randint(15, 25)}%"}
+                ],
+                "icono": "📚"
+            }
+        },
         "chatbot": {
             "consultas_procesadas": random.randint(1000, 5000),
             "tasa_satisfaccion": random.randint(85, 99),
@@ -71,6 +118,48 @@ def api_analisis_predictivo():
     
     data = {
         "titulo": "Análisis Predictivo con Machine Learning",
+        "balanced_scorecard": {
+            "financiera": {
+                "nombre": "Perspectiva Financiera",
+                "metricas": [
+                    {"indicador": "Ahorro en Gestión de Inventario", "valor": f"${random.randint(180, 320)}K", "variacion": f"-{random.randint(20, 35)}%"},
+                    {"indicador": "Reducción de Pérdidas por Churn", "valor": f"${random.randint(450, 750)}K", "variacion": f"-{random.randint(40, 55)}%"},
+                    {"indicador": "Optimización de Precios (Ingresos)", "valor": f"+${random.randint(200, 400)}K", "variacion": f"+{random.randint(12, 22)}%"},
+                    {"indicador": "ROI de Analytics", "valor": f"{random.randint(280, 420)}%", "variacion": f"+{random.randint(150, 250)}%"}
+                ],
+                "icono": "💰"
+            },
+            "clientes": {
+                "nombre": "Perspectiva de Clientes",
+                "metricas": [
+                    {"indicador": "Tasa de Retención Mejorada", "valor": f"{random.randint(85, 94)}%", "variacion": f"+{random.randint(25, 40)}%"},
+                    {"indicador": "Precisión en Predicción de Churn", "valor": f"{random.randint(88, 96)}%", "variacion": f"+{random.randint(45, 65)}%"},
+                    {"indicador": "Clientes en Riesgo Recuperados", "valor": f"{random.randint(60, 78)}%", "variacion": f"+{random.randint(50, 70)}%"},
+                    {"indicador": "Satisfacción por Disponibilidad", "valor": f"{random.randint(82, 93)}%", "variacion": f"+{random.randint(18, 28)}%"}
+                ],
+                "icono": "👥"
+            },
+            "procesos_internos": {
+                "nombre": "Perspectiva de Procesos Internos",
+                "metricas": [
+                    {"indicador": "Precisión de Forecasting", "valor": f"{random.randint(90, 97)}%", "variacion": f"+{random.randint(30, 45)}%"},
+                    {"indicador": "Tiempo de Análisis", "valor": f"{random.randint(2, 5)} horas", "variacion": f"-{random.randint(80, 92)}%"},
+                    {"indicador": "Modelos ML Activos", "valor": random.randint(6, 10), "variacion": f"+{random.randint(5, 8)} nuevos"},
+                    {"indicador": "Automatización de Decisiones", "valor": f"{random.randint(70, 88)}%", "variacion": f"+{random.randint(55, 75)}%"}
+                ],
+                "icono": "⚙️"
+            },
+            "aprendizaje": {
+                "nombre": "Perspectiva de Aprendizaje y Crecimiento",
+                "metricas": [
+                    {"indicador": "Analistas Certificados en ML", "valor": f"{random.randint(70, 90)}%", "variacion": f"+{random.randint(55, 80)}%"},
+                    {"indicador": "Proyectos de Data Science", "valor": random.randint(8, 15), "variacion": f"+{random.randint(6, 12)} nuevos"},
+                    {"indicador": "Calidad de Datos (Score)", "valor": f"{random.randint(85, 96)}/100", "variacion": f"+{random.randint(25, 40)} pts"},
+                    {"indicador": "Cultura Data-Driven", "valor": f"{random.randint(78, 92)}%", "variacion": f"+{random.randint(40, 60)}%"}
+                ],
+                "icono": "📚"
+            }
+        },
         "prediccion_ventas": {
             "ventas_historicas": ventas_historicas,
             "predicciones": predicciones,
@@ -114,6 +203,48 @@ def api_omnicanal():
     
     data = {
         "titulo": "Estrategia Omnicanal Integrada",
+        "balanced_scorecard": {
+            "financiera": {
+                "nombre": "Perspectiva Financiera",
+                "metricas": [
+                    {"indicador": "Ventas Totales Integradas", "valor": f"${random.randint(800, 1200)}K", "variacion": f"+{random.randint(30, 45)}%"},
+                    {"indicador": "Sinergia entre Canales", "valor": f"+${random.randint(200, 350)}K", "variacion": f"+{random.randint(35, 50)}%"},
+                    {"indicador": "Ticket Promedio Cross-canal", "valor": f"${random.randint(180, 280)}", "variacion": f"+{random.randint(25, 40)}%"},
+                    {"indicador": "ROI de Integración Omnicanal", "valor": f"{random.randint(320, 480)}%", "variacion": f"+{random.randint(200, 300)}%"}
+                ],
+                "icono": "💰"
+            },
+            "clientes": {
+                "nombre": "Perspectiva de Clientes",
+                "metricas": [
+                    {"indicador": "NPS Experiencia Omnicanal", "valor": random.randint(72, 88), "variacion": f"+{random.randint(22, 35)} pts"},
+                    {"indicador": "Customer Journey Exitosos", "valor": f"{random.randint(78, 92)}%", "variacion": f"+{random.randint(40, 60)}%"},
+                    {"indicador": "Clientes Multi-canal", "valor": f"{random.randint(55, 75)}%", "variacion": f"+{random.randint(35, 55)}%"},
+                    {"indicador": "Tasa de Conversión Integrada", "valor": f"{random.randint(14, 20)}%", "variacion": f"+{random.randint(45, 65)}%"}
+                ],
+                "icono": "👥"
+            },
+            "procesos_internos": {
+                "nombre": "Perspectiva de Procesos Internos",
+                "metricas": [
+                    {"indicador": "Integración de Sistemas", "valor": f"{random.randint(88, 98)}%", "variacion": f"+{random.randint(60, 85)}%"},
+                    {"indicador": "Tiempo de Fulfillment", "valor": f"{random.randint(18, 36)} horas", "variacion": f"-{random.randint(35, 50)}%"},
+                    {"indicador": "Sincronización de Inventario", "valor": f"{random.randint(92, 99)}%", "variacion": f"+{random.randint(40, 60)}%"},
+                    {"indicador": "Touchpoints Optimizados", "valor": f"{random.randint(12, 18)}", "variacion": f"+{random.randint(8, 12)} nuevos"}
+                ],
+                "icono": "⚙️"
+            },
+            "aprendizaje": {
+                "nombre": "Perspectiva de Aprendizaje y Crecimiento",
+                "metricas": [
+                    {"indicador": "Personal Multi-capacitado", "valor": f"{random.randint(75, 92)}%", "variacion": f"+{random.randint(50, 75)}%"},
+                    {"indicador": "Competencias Digitales", "valor": f"{random.randint(80, 94)}/100", "variacion": f"+{random.randint(35, 50)} pts"},
+                    {"indicador": "Innovaciones Implementadas", "valor": random.randint(6, 12), "variacion": f"+{random.randint(5, 10)} nuevas"},
+                    {"indicador": "Cultura Customer-Centric", "valor": f"{random.randint(82, 95)}%", "variacion": f"+{random.randint(30, 45)}%"}
+                ],
+                "icono": "📚"
+            }
+        },
         "canales": canales,
         "totales": {
             "ventas": sum(c["ventas"] for c in canales.values()),
@@ -146,6 +277,48 @@ def api_sostenibilidad():
     """API para Sostenibilidad"""
     data = {
         "titulo": "Sostenibilidad y Comercio Verde",
+        "balanced_scorecard": {
+            "financiera": {
+                "nombre": "Perspectiva Financiera",
+                "metricas": [
+                    {"indicador": "Ahorro en Cadena Verde", "valor": f"${random.randint(220, 380)}K", "variacion": f"-{random.randint(28, 42)}%"},
+                    {"indicador": "Ingresos Línea Sostenible", "valor": f"+${random.randint(350, 550)}K", "variacion": f"+{random.randint(45, 70)}%"},
+                    {"indicador": "Premium Price Productos Eco", "valor": f"+{random.randint(12, 22)}%", "variacion": f"+{random.randint(8, 15)}%"},
+                    {"indicador": "ROI Inversión Verde", "valor": f"{random.randint(250, 380)}%", "variacion": f"+{random.randint(180, 280)}%"}
+                ],
+                "icono": "💰"
+            },
+            "clientes": {
+                "nombre": "Perspectiva de Clientes",
+                "metricas": [
+                    {"indicador": "Consumidores Conscientes", "valor": f"{random.randint(42, 58)}%", "variacion": f"+{random.randint(30, 45)}%"},
+                    {"indicador": "Lealtad Productos Eco", "valor": f"{random.randint(78, 92)}%", "variacion": f"+{random.randint(35, 50)}%"},
+                    {"indicador": "NPS Iniciativas Sostenibles", "valor": random.randint(75, 90), "variacion": f"+{random.randint(25, 38)} pts"},
+                    {"indicador": "Preferencia de Marca Verde", "valor": f"{random.randint(65, 82)}%", "variacion": f"+{random.randint(40, 60)}%"}
+                ],
+                "icono": "👥"
+            },
+            "procesos_internos": {
+                "nombre": "Perspectiva de Procesos Internos",
+                "metricas": [
+                    {"indicador": "Reducción Emisiones CO2", "valor": f"-{random.randint(35, 52)}%", "variacion": f"-{random.randint(25, 40)}%"},
+                    {"indicador": "Energía Renovable", "valor": f"{random.randint(55, 80)}%", "variacion": f"+{random.randint(40, 65)}%"},
+                    {"indicador": "Economía Circular (Tasa)", "valor": f"{random.randint(48, 68)}%", "variacion": f"+{random.randint(35, 55)}%"},
+                    {"indicador": "Certificaciones Sostenibles", "valor": random.randint(6, 10), "variacion": f"+{random.randint(4, 7)} nuevas"}
+                ],
+                "icono": "⚙️"
+            },
+            "aprendizaje": {
+                "nombre": "Perspectiva de Aprendizaje y Crecimiento",
+                "metricas": [
+                    {"indicador": "Cultura de Sostenibilidad", "valor": f"{random.randint(80, 94)}%", "variacion": f"+{random.randint(50, 75)}%"},
+                    {"indicador": "Capacitación en ESG", "valor": f"{random.randint(65, 88)}%", "variacion": f"+{random.randint(45, 70)}%"},
+                    {"indicador": "Proyectos de Innovación Verde", "valor": random.randint(8, 14), "variacion": f"+{random.randint(6, 11)} nuevos"},
+                    {"indicador": "Compromiso del Equipo", "valor": f"{random.randint(85, 96)}/100", "variacion": f"+{random.randint(30, 45)} pts"}
+                ],
+                "icono": "📚"
+            }
+        },
         "esg": {
             "environmental": {
                 "reduccion_co2": random.randint(15, 35),

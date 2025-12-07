@@ -1,0 +1,2348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Innovaciones 2025 · Gerencia, Marketing y Casos de Estudio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #020617;
+      color: #e5e7eb;
+      line-height: 1.5;
+    }
+    header {
+      background: #020617;
+      border-bottom: 1px solid #1f2937;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: .75rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .85rem;
+    }
+    .nav-title {
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: #9ca3af;
+    }
+    .nav a {
+      color: #9ca3af;
+      text-decoration: none;
+      margin-left: .8rem;
+      font-size: .8rem;
+    }
+    .nav a:hover { color: #e5e7eb; }
+
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.25rem 1rem 3rem;
+    }
+
+    h1, h2, h3 {
+      font-weight: 700;
+      color: #f9fafb;
+    }
+    h1 { font-size: 1.7rem; margin-bottom: .4rem; }
+    h2 { font-size: 1.3rem; margin: 1.5rem 0 .75rem; }
+    h3 { font-size: 1.1rem; margin: 1.1rem 0 .5rem; }
+
+    p { margin: .35rem 0; color: #9ca3af; font-size: .93rem; }
+
+    .intro-box {
+      background: radial-gradient(circle at top left, rgba(34,197,94,0.2), transparent 60%);
+      border: 1px solid #1f2937;
+      border-radius: 1rem;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: .7rem;
+      padding: .2rem .6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.4);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: #9ca3af;
+      margin-bottom: .35rem;
+    }
+
+    .section-card {
+      border-radius: 1rem;
+      border: 1px solid #1f2937;
+      background: #020617;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: .5rem;
+      flex-wrap: wrap;
+    }
+    .tag {
+      font-size: .75rem;
+      padding: .15rem .55rem;
+      border-radius: .75rem;
+      background: rgba(34,197,94,0.16);
+      border: 1px solid rgba(34,197,94,0.5);
+      color: #bbf7d0;
+      white-space: nowrap;
+    }
+
+    .subsection-title {
+      font-size: .95rem;
+      font-weight: 600;
+      margin: .9rem 0 .3rem;
+      color: #e5e7eb;
+    }
+
+    .table-wrapper {
+      margin-top: .5rem;
+      border-radius: .75rem;
+      overflow: hidden;
+      border: 1px solid #1f2937;
+      background: #020617;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .82rem;
+    }
+    th, td {
+      border-bottom: 1px solid #1f2937;
+      padding: .5rem .55rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #020617;
+      color: #e5e7eb;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      font-size: .7rem;
+    }
+    tr:nth-child(even) td {
+      background: #020617;
+    }
+    ul {
+      padding-left: 1.1rem;
+      margin: 0;
+    }
+    li { margin: .15rem 0; }
+
+    .kpi-pill {
+      display: inline-block;
+      padding: .15rem .45rem;
+      border-radius: .8rem;
+      background: rgba(15,23,42,0.9);
+      border: 1px dashed #4b5563;
+      font-size: .75rem;
+      margin: .05rem .15rem .05rem 0;
+      color: #9ca3af;
+    }
+
+    .two-cols {
+      display: grid;
+      grid-template-columns: minmax(0,1.1fr) minmax(0,1.1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 900px) {
+      .two-cols { grid-template-columns: 1fr; }
+    }
+
+    /* Estilos para casos de estudio mejorados */
+    .case-study-box {
+      background: #0f172a;
+      border: 1px solid #1e293b;
+      border-radius: .75rem;
+      padding: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .metric-card {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+      border: 1px solid #334155;
+      border-radius: .5rem;
+      padding: .75rem;
+      margin: .5rem 0;
+    }
+    
+    .metric-value {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #22c55e;
+      margin: .25rem 0;
+    }
+    
+    .metric-label {
+      font-size: .8rem;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    
+    .bar-chart {
+      display: flex;
+      align-items: flex-end;
+      gap: .5rem;
+      height: 120px;
+      margin: 1rem 0;
+      padding: .5rem;
+      background: #020617;
+      border-radius: .5rem;
+    }
+    
+    .bar {
+      flex: 1;
+      background: linear-gradient(to top, #22c55e, #16a34a);
+      border-radius: .25rem .25rem 0 0;
+      position: relative;
+      transition: all .3s;
+    }
+    
+    .bar:hover {
+      opacity: .8;
+    }
+    
+    .bar-label {
+      position: absolute;
+      bottom: -1.5rem;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: .7rem;
+      color: #9ca3af;
+    }
+    
+    .bar-value {
+      position: absolute;
+      top: -1.5rem;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: .75rem;
+      font-weight: 600;
+      color: #22c55e;
+    }
+    
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      margin: 1rem 0;
+    }
+    
+    .timeline:before {
+      content: '';
+      position: absolute;
+      left: .5rem;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #22c55e, #0f172a);
+    }
+    
+    .timeline-item {
+      position: relative;
+      margin-bottom: 1.5rem;
+      padding-left: 1rem;
+    }
+    
+    .timeline-item:before {
+      content: '';
+      position: absolute;
+      left: -1.6rem;
+      top: .25rem;
+      width: .75rem;
+      height: .75rem;
+      border-radius: 50%;
+      background: #22c55e;
+      border: 2px solid #020617;
+    }
+    
+    .change-highlight {
+      background: rgba(34,197,94,0.1);
+      border-left: 3px solid #22c55e;
+      padding: .5rem .75rem;
+      margin: .5rem 0;
+      border-radius: .25rem;
+    }
+    
+    .metric-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: .75rem;
+      margin: 1rem 0;
+    }
+
+    footer {
+      margin-top: 2rem;
+      font-size: .75rem;
+      color: #6b7280;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="nav-title">Innovaciones 2025</div>
+    <div>
+      <a href="#di">Decision Intelligence</a>
+      <a href="#estrategia">Estrategia dinámica</a>
+      <a href="#liderazgo">Liderazgo regenerativo</a>
+      <a href="#esg">ESG</a>
+      <a href="#hiper">Hiper‑personalización</a>
+      <a href="#gerencia">Gerencia Estratégica</a>
+      <a href="#resumen">Resumen</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="intro-box">
+    <span class="badge">Gestión adaptativa · Visión 2025</span>
+    <h1>Innovaciones en Gerencia, Marketing y Casos de Estudio</h1>
+    <p>
+      En 2025 la gerencia estratégica se redefine por seis innovaciones clave: Inteligencia de Decisión, Estrategia Dinámica, Liderazgo Regenerativo, ESG como eje financiero, Hiper‑personalización del cliente y Gerencia Estratégica Integrada.
+    </p>
+    <p>
+      Cada innovación se presenta con su estructura de gestión, rol del marketing, innovaciones comerciales y un caso de estudio paso a paso con resultados e interpretación, para que se pueda adaptar fácilmente en una empresa.
+    </p>
+  </section>
+
+  <!-- 1. INTELIGENCIA DE DECISIÓN -->
+  <section id="di" class="section-card">
+    <div class="section-header">
+      <h2>1. Inteligencia de Decisión (Decision Intelligence)</h2>
+      <span class="tag">IA + Human‑in‑the‑loop</span>
+    </div>
+    <p>
+      Convierte la ciencia de datos en decisiones comerciales efectivas, cerrando la brecha entre dashboards y acción mediante modelos que recomiendan escenarios y se retroalimentan con resultados.
+    </p>
+
+    <div class="two-cols">
+      <!-- Estructura de gestión -->
+      <div>
+        <div class="subsection-title">Estructura de gestión</div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Bloque</th><th>Contenido / Ejemplo</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Propósito</td>
+                <td>Reducir sesgo, error y tiempos de decisión en precios, promociones, inventario y crédito, usando modelos predictivos con supervisión humana.</td>
+              </tr>
+              <tr>
+                <td>Cómo se desarrolla</td>
+                <td>
+                  <ul>
+                    <li>Auditoría de decisiones críticas de alto impacto.</li>
+                    <li>Integración de datos (ERP, CRM, mercado).</li>
+                    <li>Modelos de predicción y recomendación de escenarios.</li>
+                    <li>Flujo IA + gerente (human‑in‑the‑loop).</li>
+                    <li>Retroalimentación continua de modelos con resultados reales.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Políticas</td>
+                <td>
+                  <ul>
+                    <li>Decisiones comerciales &gt; X monto deben simular al menos 1 escenario de IA.</li>
+                    <li>Comité de modelos para revisar sesgos, explicabilidad y ética.</li>
+                    <li>Registro de decisiones finales y justificación si se ignora la recomendación.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Cómo se mide</td>
+                <td>
+                  <ul>
+                    <li>Tablero mensual por tipo de decisión.</li>
+                    <li>Comparación antes/después en margen, costos y velocidad de reacción.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>KPIs</td>
+                <td>
+                  <span class="kpi-pill">Velocidad de decisión (problema→acción)</span>
+                  <span class="kpi-pill">Precisión del modelo vs realidad</span>
+                  <span class="kpi-pill">Decisiones “corregidas” por el modelo</span>
+                  <span class="kpi-pill">Reducción de OpEx en inventario/logística</span>
+                  <span class="kpi-pill">Pérdidas evitadas por simulación de riesgo</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Marketing e innovación comercial -->
+      <div>
+        <div class="subsection-title">Marketing e innovaciones comerciales</div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Bloque</th><th>Contenido / Ejemplo</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Rol del marketing</td>
+                <td>
+                  <ul>
+                    <li>Usar modelos para decidir mix de canales, promociones y creatividades.</li>
+                    <li>Priorizar experimentos (A/B, test geográficos) vs campañas solo intuitivas.</li>
+                    <li>Lanzar campañas con mejor relación ROI / riesgo.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Innovaciones comerciales</td>
+                <td>
+                  <ul>
+                    <li>Pricing dinámico por segmento y canal.</li>
+                    <li>Promociones optimizadas por elasticidad de demanda.</li>
+                    <li>Asignación de inversión comercial según retorno esperado.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Plan de acción</td>
+                <td>
+                  <ul>
+                    <li>Elegir 2–3 decisiones comerciales críticas para modelar.</li>
+                    <li>Construir dataset (ventas, precios, promos, campañas, competencia).</li>
+                    <li>Entrenar modelos simples como primera etapa.</li>
+                    <li>Crear un “simulador comercial” para marketing/ventas.</li>
+                    <li>Revisar mensualmente predicciones vs ventas reales.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>KPIs comerciales</td>
+                <td>
+                  <span class="kpi-pill">Error de forecast por campaña/promo</span>
+                  <span class="kpi-pill">ROI de campaña</span>
+                  <span class="kpi-pill">% decisiones de marketing basadas en modelos</span>
+                  <span class="kpi-pill">Reducción de stock en exceso / quiebres</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Caso de estudio DI -->
+    <h3>Caso de estudio · Retail de supermercados</h3>
+    
+    <div class="case-study-box">
+      <p><strong>🏢 Empresa:</strong> Cadena regional con 180 tiendas, facturación anual $45M</p>
+      <p><strong>⚠️ Situación inicial:</strong> Las promociones se definían por intuición basada en experiencia del equipo comercial. Descuentos generales del 20% en todas las categorías, foco exclusivo en volumen sin evaluar impacto en margen. Resultado: canibalización de ventas regulares y pérdida de margen.</p>
+      
+      <div class="subsection-title">📊 Cambios Internos Implementados</div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>Mes 1-2: Auditoría y preparación de datos</strong>
+          <ul>
+            <li>Análisis de 24 meses de historial de ventas, precios y promociones</li>
+            <li>Integración de datos de ERP (SAP), CRM y competencia (web scraping)</li>
+            <li>Identificación de 2 categorías piloto: Lácteos ($8M/año) y Snacks ($5.5M/año)</li>
+            <li>Formación del equipo comercial en conceptos de elasticidad de precio</li>
+          </ul>
+        </div>
+        
+        <div class="timeline-item">
+          <strong>Mes 3-4: Modelamiento y simulación</strong>
+          <ul>
+            <li>Desarrollo de modelo de elasticidad precio-demanda por categoría</li>
+            <li>Creación de 3 escenarios de descuento: 10%, 15% y 20%</li>
+            <li>Simulación de impacto en ventas, margen y ROI por escenario</li>
+            <li>Diseño de dashboard para gerentes de categoría</li>
+          </ul>
+        </div>
+        
+        <div class="timeline-item">
+          <strong>Mes 5-7: Piloto y ajustes</strong>
+          <ul>
+            <li>Implementación en 50 tiendas (grupo test) vs 50 tiendas control</li>
+            <li>Sistema de recomendaciones en tiempo real para jefes de tienda</li>
+            <li>Ajuste semanal de modelos según resultados reales</li>
+            <li>Protocolo de escalamiento ante desviaciones >10%</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subsection-title">📈 Resultados Comparativos (Período: 3 meses)</div>
+      
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="metric-label">Ventas en unidades</div>
+          <div class="metric-value">+12%</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs +5% en control</div>
+          <div style="font-size:.7rem;color:#6b7280;">Diferencia: +140% más efectivo</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-label">Margen bruto categoría</div>
+          <div class="metric-value">+8%</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs +2% en control</div>
+          <div style="font-size:.7rem;color:#6b7280;">Diferencia: $180K adicionales</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-label">Error de forecast</div>
+          <div class="metric-value">7%</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs 18% en control</div>
+          <div style="font-size:.7rem;color:#6b7280;">Reducción: -61% de error</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-label">ROI campaña promocional</div>
+          <div class="metric-value">3.8x</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs 2.1x en control</div>
+          <div style="font-size:.7rem;color:#6b7280;">Cada $1 generó $3.80</div>
+        </div>
+      </div>
+
+      <div class="subsection-title">📊 Comparación Visual de Escenarios</div>
+      <p style="font-size:.85rem;margin:.5rem 0;">Simulación realizada antes de implementar (categoría Lácteos)</p>
+      
+      <div class="bar-chart">
+        <div class="bar" style="height: 45%;">
+          <span class="bar-value">+5%</span>
+          <span class="bar-label">Escenario<br>10% desc</span>
+        </div>
+        <div class="bar" style="height: 75%; background: linear-gradient(to top, #22c55e, #16a34a);">
+          <span class="bar-value">+12%</span>
+          <span class="bar-label">Escenario<br>15% desc<br><strong>✓ ELEGIDO</strong></span>
+        </div>
+        <div class="bar" style="height: 90%; background: linear-gradient(to top, #ef4444, #dc2626);">
+          <span class="bar-value">+18%</span>
+          <span class="bar-label">Escenario<br>20% desc<br>(margen -3%)</span>
+        </div>
+      </div>
+
+      <div class="change-highlight">
+        <strong>💡 Interpretación clave:</strong> El modelo de DI identificó que el descuento óptimo no es el máximo. Con 15% de descuento se logró +12% en volumen y +8% en margen, mientras que 20% de descuento generaba más volumen (+18%) pero destruía margen (-3%). La empresa eligió equilibrio margen-volumen, maximizando rentabilidad.
+      </div>
+
+      <div class="subsection-title">💰 Impacto Financiero Anualizado (proyección)</div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Concepto</th><th>Antes (Enfoque intuitivo)</th><th>Después (Decision Intelligence)</th><th>Δ Impacto</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ventas categorías piloto</td>
+              <td>$13.5M</td>
+              <td>$15.1M</td>
+              <td style="color:#22c55e;">+$1.6M (+11.8%)</td>
+            </tr>
+            <tr>
+              <td>Margen bruto</td>
+              <td>$2.7M (20%)</td>
+              <td>$3.32M (22%)</td>
+              <td style="color:#22c55e;">+$620K (+23%)</td>
+            </tr>
+            <tr>
+              <td>Costo de quiebres de stock</td>
+              <td>$180K</td>
+              <td>$95K</td>
+              <td style="color:#22c55e;">-$85K (-47%)</td>
+            </tr>
+            <tr>
+              <td>Costo de obsolescencia</td>
+              <td>$145K</td>
+              <td>$62K</td>
+              <td style="color:#22c55e;">-$83K (-57%)</td>
+            </tr>
+            <tr style="background:#1e293b;font-weight:700;">
+              <td>EBITDA incremental</td>
+              <td>—</td>
+              <td>—</td>
+              <td style="color:#22c55e;font-size:1.1rem;">+$788K</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subsection-title">🔄 Cambios Operativos Sostenidos</div>
+      <ul style="margin:.5rem 0;">
+        <li><strong>Comité de Pricing semanal:</strong> Gerentes de categoría + BI + Comercial revisan recomendaciones del modelo</li>
+        <li><strong>Dashboard en tiempo real:</strong> Jefes de tienda visualizan recomendaciones de precio/promo por SKU</li>
+        <li><strong>Protocolo de override:</strong> Si gerente decide ignorar recomendación, debe documentar razón (auditoría de calidad de decisión)</li>
+        <li><strong>Reentrenamiento mensual:</strong> Modelos se actualizan con datos reales para mejorar precisión</li>
+        <li><strong>Plan de expansión:</strong> Escalar a 8 categorías adicionales en siguientes 12 meses</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 2. ESTRATEGIA DINÁMICA -->
+  <section id="estrategia" class="section-card">
+    <div class="section-header">
+      <h2>2. Estrategia Dinámica y Rolling Forecasts</h2>
+      <span class="tag">Sprints estratégicos</span>
+    </div>
+    <p>
+      Sustituye la planificación anual rígida por una estrategia viva basada en pronósticos rodantes y reasignación ágil de recursos para capturar oportunidades y proteger ingresos.
+    </p>
+
+    <div class="two-cols">
+      <div>
+        <div class="subsection-title">Estructura de gestión</div>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>Bloque</th><th>Contenido / Ejemplo</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>Propósito</td>
+                <td>Aumentar capacidad de reacción ante cambios de mercado optimizando cash flow y reduciendo necesidad de financiamiento de emergencia.</td>
+              </tr>
+              <tr>
+                <td>Cómo se desarrolla</td>
+                <td>
+                  <ul>
+                    <li>Eliminar presupuesto estático como “ley” anual.</li>
+                    <li>Implementar rolling forecast de 12–18 meses actualizado mensualmente.</li>
+                    <li>Crear bolsas de recursos flexibles.</li>
+                    <li>Realizar QBR centrados en qué cambió y qué pivotear.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Políticas</td>
+                <td>
+                  <ul>
+                    <li>Proyectos sin creación de valor documentada pierden presupuesto en QBR.</li>
+                    <li>Detalle de planificación solo por 3–4 meses; resto flexible.</li>
+                    <li>Escenarios base/pesimista/agresivo obligatorios para cada unidad.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Cómo se mide</td>
+                <td>
+                  <ul>
+                    <li>Reportes mensuales de forecast vs real por línea.</li>
+                    <li>Tracking de reasignación de recursos: montos, origen/destino, tiempos.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>KPIs</td>
+                <td>
+                  <span class="kpi-pill">Varianza del pronóstico (&lt;5 %)</span>
+                  <span class="kpi-pill">Días para reasignar presupuesto</span>
+                  <span class="kpi-pill">Uso de líneas de crédito de emergencia</span>
+                  <span class="kpi-pill">Ingresos de oportunidades “rápidas”</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div>
+        <div class="subsection-title">Marketing e innovaciones comerciales</div>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>Bloque</th><th>Contenido / Ejemplo</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>Rol del marketing</td>
+                <td>
+                  <ul>
+                    <li>Pasar de plan anual cerrado a “sprints de marketing” trimestrales.</li>
+                    <li>Gestionar un portafolio de campañas base y experimentales.</li>
+                    <li>Preparar playbooks de reacción rápida ante cambios competitivos.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Innovaciones comerciales</td>
+                <td>
+                  <ul>
+                    <li>Portafolio vivo de campañas (branding + performance).</li>
+                    <li>Planeamiento comercial por sprints alineados al rolling forecast.</li>
+                    <li>Uso de “bolsa flexible” para iniciativas comerciales emergentes.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Plan de acción</td>
+                <td>
+                  <ul>
+                    <li>Diseñar mapa comercial anual flexible por trimestres.</li>
+                    <li>Crear comité comercial‑financiero mensual.</li>
+                    <li>Definir % de presupuesto flexible (ej. 15–20 %).</li>
+                    <li>Implementar tableros de ventas vs forecast y reasignación de inversión.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>KPIs comerciales</td>
+                <td>
+                  <span class="kpi-pill">% presupuesto comercial reasignado</span>
+                  <span class="kpi-pill">Varianza forecast leads/ventas vs real</span>
+                  <span class="kpi-pill">Tiempo para mover inversión entre campañas</span>
+                  <span class="kpi-pill">ROI incremental de campañas “fuera de plan”</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Caso de estudio Estrategia dinámica -->
+    <h3>Caso de estudio · Empresa SaaS B2B</h3>
+    
+    <div class="case-study-box">
+      <p><strong>🏢 Empresa:</strong> Plataforma SaaS de gestión empresarial, ARR $12M, 850 clientes activos</p>
+      <p><strong>⚠️ Situación inicial:</strong> Presupuesto comercial y de producto se aprobaban en diciembre para todo el año siguiente. Durante el año, surgían oportunidades en nuevos segmentos pero no había fondos. Resultado: sobreinversión en segmentos saturados y pérdida de oportunidades de alto crecimiento.</p>
+      
+      <div class="subsection-title">📊 Cambios Internos Implementados</div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>Trim 1: Rediseño del proceso de planeación</strong>
+          <ul>
+            <li>Eliminación del presupuesto anual rígido como "verdad absoluta"</li>
+            <li>Implementación de rolling forecast de 15 meses actualizado mensualmente</li>
+            <li>Creación de 3 escenarios: Base (80% probabilidad), Pesimista (50%) y Agresivo (30%)</li>
+            <li>Definición de "bolsa flexible" del 20% del presupuesto comercial ($480K anuales)</li>
+            <li>Cambio cultural: de "cumplir plan" a "maximizar retorno según contexto"</li>
+          </ul>
+        </div>
+        
+        <div class="timeline-item">
+          <strong>Trim 2-4: Operación con Quarterly Business Reviews (QBR)</strong>
+          <ul>
+            <li>QBR mensuales ligeros (2h) + QBR trimestrales profundos (jornada completa)</li>
+            <li>Análisis de varianza forecast vs real por segmento, canal y geografía</li>
+            <li>Decisiones de reasignación de presupuesto con criterio ROI/Payback</li>
+            <li>Tableros automatizados en Looker: MRR, CAC, LTV, Churn por segmento</li>
+            <li>Protocolo: proyectos con ROI < 150% pierden presupuesto, se reasigna a proyectos ROI > 300%</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subsection-title">📈 Resultados Año 1 de Implementación</div>
+      
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="metric-label">Varianza forecast-real</div>
+          <div class="metric-value">4%</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs 12% antes</div>
+          <div style="font-size:.7rem;color:#6b7280;">Reducción: -67% de error</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-label">CAC promedio</div>
+          <div class="metric-value">$85</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs $100 antes</div>
+          <div style="font-size:.7rem;color:#6b7280;">Reducción: -15% de CAC</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-label">Presupuesto reasignado</div>
+          <div class="metric-value">22%</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs 3% antes</div>
+          <div style="font-size:.7rem;color:#6b7280;">$528K movidos estratégicamente</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-label">Crecimiento MRR segmento clave</div>
+          <div class="metric-value">+22%</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs +10% proyectado</div>
+          <div style="font-size:.7rem;color:#6b7280;">+$120K MRR adicional/mes</div>
+        </div>
+      </div>
+
+      <div class="subsection-title">📊 Evolución de Reasignación de Presupuesto</div>
+      
+      <div class="bar-chart">
+        <div class="bar" style="height: 20%;">
+          <span class="bar-value">3%</span>
+          <span class="bar-label">Año -1<br>Plan fijo</span>
+        </div>
+        <div class="bar" style="height: 45%;">
+          <span class="bar-value">9%</span>
+          <span class="bar-label">Trim 1<br>Primeros ajustes</span>
+        </div>
+        <div class="bar" style="height: 65%;">
+          <span class="bar-value">17%</span>
+          <span class="bar-label">Trim 2<br>Confianza sube</span>
+        </div>
+        <div class="bar" style="height: 85%;">
+          <span class="bar-value">22%</span>
+          <span class="bar-label">Trim 3-4<br>Operación madura</span>
+        </div>
+      </div>
+
+      <div class="change-highlight">
+        <strong>💡 Caso emblemático de reasignación:</strong> En Q2, el segmento "Retail pequeño" mostró CAC $120 con LTV $280 (ROI 133%). Se detectó oportunidad en "Logística mid-market" con CAC $95 y LTV $520 (ROI 447%). En 3 semanas se movieron $85K desde Retail a Logística, capturando 28 clientes nuevos de alto valor que generaron $47K MRR adicional.
+      </div>
+
+      <div class="subsection-title">💰 Impacto Financiero Comparativo</div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Métrica Financiera</th><th>Plan Fijo (Año -1)</th><th>Estrategia Dinámica (Año 1)</th><th>Δ Impacto</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>ARR (Annual Recurring Revenue)</td>
+              <td>$12.0M</td>
+              <td>$14.8M</td>
+              <td style="color:#22c55e;">+$2.8M (+23.3%)</td>
+            </tr>
+            <tr>
+              <td>Nuevos clientes adquiridos</td>
+              <td>285</td>
+              <td>348</td>
+              <td style="color:#22c55e;">+63 (+22%)</td>
+            </tr>
+            <tr>
+              <td>CAC blended</td>
+              <td>$100</td>
+              <td>$85</td>
+              <td style="color:#22c55e;">-$15 (-15%)</td>
+            </tr>
+            <tr>
+              <td>LTV promedio</td>
+              <td>$420</td>
+              <td>$485</td>
+              <td style="color:#22c55e;">+$65 (+15.5%)</td>
+            </tr>
+            <tr>
+              <td>Ratio LTV/CAC</td>
+              <td>4.2x</td>
+              <td>5.7x</td>
+              <td style="color:#22c55e;">+1.5x (+36%)</td>
+            </tr>
+            <tr>
+              <td>Churn rate anual</td>
+              <td>18%</td>
+              <td>14%</td>
+              <td style="color:#22c55e;">-4pp (-22%)</td>
+            </tr>
+            <tr>
+              <td>Uso de línea crédito emergencia</td>
+              <td>$320K</td>
+              <td>$45K</td>
+              <td style="color:#22c55e;">-$275K (-86%)</td>
+            </tr>
+            <tr style="background:#1e293b;font-weight:700;">
+              <td>Margen operativo (EBITDA)</td>
+              <td>18%</td>
+              <td>26%</td>
+              <td style="color:#22c55e;font-size:1.1rem;">+8pp</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subsection-title">🔄 Cambios Culturales y de Proceso</div>
+      <ul style="margin:.5rem 0;">
+        <li><strong>Mindset "test & learn":</strong> Los equipos proponen experimentos comerciales con presupuesto limitado ($5-15K). Si ROI > 300% en 60 días, escalan con más presupuesto</li>
+        <li><strong>Dashboard único de verdad:</strong> Rolling forecast de 15 meses es LA fuente de verdad. Presupuesto anual solo es referencia inicial</li>
+        <li><strong>QBR con datos, no opiniones:</strong> Cada solicitud de presupuesto debe venir con: forecast de leads, tasa de conversión esperada, CAC proyectado, LTV segmento</li>
+        <li><strong>Incentivos variables:</strong> Bonos de dirección comercial atados 60% a ARR y 40% a eficiencia (CAC/LTV ratio)</li>
+        <li><strong>Velocidad de decisión:</strong> Reasignaciones < $20K se aprueban en 48h. Reasignaciones > $20K requieren QBR mensual</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3. LIDERAZGO REGENERATIVO -->
+  <section id="liderazgo" class="section-card">
+    <div class="section-header">
+      <h2>3. Liderazgo Regenerativo y Gestión Híbrida</h2>
+      <span class="tag">Personas y energía</span>
+    </div>
+    <p>
+      Propone que la empresa devuelva más de lo que toma de sus colaboradores, rediseñando el trabajo para aumentar bienestar, retención y productividad sostenible.
+    </p>
+
+    <div class="two-cols">
+      <div>
+        <div class="subsection-title">Estructura de gestión</div>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>Bloque</th><th>Contenido / Ejemplo</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>Propósito</td>
+                <td>Mejorar bienestar, retención y productividad mediante modelos híbridos asíncronos y liderazgo centrado en resultados y energía.</td>
+              </tr>
+              <tr>
+                <td>Cómo se desarrolla</td>
+                <td>
+                  <ul>
+                    <li>Auditoría de bienestar (estrés, carga cognitiva, satisfacción).</li>
+                    <li>Protocolos de comunicación asíncrona.</li>
+                    <li>Rediseño de roles hacia outputs y OKR.</li>
+                    <li>Formación de líderes en resiliencia y gestión de energía.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Políticas</td>
+                <td>
+                  <ul>
+                    <li>Días/franjas sin reuniones.</li>
+                    <li>Reuniones solo para decidir; reportes escritos o en video.</li>
+                    <li>Protocolos de desconexión digital.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Cómo se mide</td>
+                <td>
+                  <ul>
+                    <li>Encuestas de clima y burnout.</li>
+                    <li>Seguimiento de rotación, ausentismo y performance.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>KPIs</td>
+                <td>
+                  <span class="kpi-pill">eNPS del personal</span>
+                  <span class="kpi-pill">Rotación voluntaria (talento clave)</span>
+                  <span class="kpi-pill">Índice de burnout</span>
+                  <span class="kpi-pill">Costos de reclutamiento y reemplazo</span>
+                  <span class="kpi-pill">Calidad del trabajo (errores, NPS cliente)</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div>
+        <div class="subsection-title">Marketing e innovaciones comerciales</div>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>Bloque</th><th>Contenido / Ejemplo</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>Rol del marketing y ventas</td>
+                <td>
+                  <ul>
+                    <li>Pasar de “fábrica de urgencias” a equipo creativo‑analítico.</li>
+                    <li>Ventas consultivas: menos visitas masivas, más reuniones preparadas.</li>
+                    <li>Adoptar flujos asíncronos para briefs y aprobaciones.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Innovaciones comerciales</td>
+                <td>
+                  <ul>
+                    <li>Modelo de ventas consultivas con preparación estructurada.</li>
+                    <li>Pipeline gestionado con herramientas colaborativas.</li>
+                    <li>Procesos de marketing con menos retrabajos.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Plan de acción</td>
+                <td>
+                  <ul>
+                    <li>Mapear el flujo de trabajo comercial y de campañas.</li>
+                    <li>Eliminar pasos redundantes y reuniones sin valor.</li>
+                    <li>Definir roles claros en marketing y ventas.</li>
+                    <li>Entrenar líderes comerciales en gestión de carga y feedback.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>KPIs comerciales</td>
+                <td>
+                  <span class="kpi-pill">eNPS equipo comercial/marketing</span>
+                  <span class="kpi-pill">Rotación del equipo comercial</span>
+                  <span class="kpi-pill">Lead time de campañas</span>
+                  <span class="kpi-pill">Tasa de cierre y ticket promedio</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Caso de estudio Liderazgo regenerativo -->
+    <h3>Caso de estudio · Consultora de servicios</h3>
+    
+    <div class="case-study-box">
+      <p><strong>🏢 Empresa:</strong> Consultora tecnológica, 120 empleados, facturación $18M/año, proyectos de 3-12 meses</p>
+      <p><strong>⚠️ Situación inicial:</strong> Rotación voluntaria del 25% anual (30 personas/año), 60% del personal con índice alto de burnout, quejas recurrentes de clientes por cambios de equipo y retrasos. Costo de reemplazo: ~$15K por persona. Pérdida anual estimada: $450K + proyectos en riesgo.</p>
+      
+      <div class="subsection-title">📊 Cambios Internos Implementados</div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>Trimestre 1: Diagnóstico y diseño</strong>
+          <ul>
+            <li><strong>Auditoría de bienestar:</strong> Encuesta anónima + entrevistas 1:1 con 40 personas. Hallazgos clave: 78% siente sobrecarga, 65% trabaja fines de semana, 82% tiene >25 reuniones/semana</li>
+            <li><strong>Análisis de carga:</strong> Tiempo productivo real < 40% de jornada (resto: reuniones y email)</li>
+            <li><strong>Comité de transformación:</strong> CEO + CHRO + 5 líderes + 3 representantes de consultores junior</li>
+            <li><strong>Definición de principios:</strong> 1) Resultados > presencia, 2) Energía sostenible, 3) Autonomía con accountability</li>
+          </ul>
+        </div>
+        
+        <div class="timeline-item">
+          <strong>Trimestre 2: Pilotos y políticas</strong>
+          <ul>
+            <li><strong>Política "No meeting days":</strong> Martes y jueves sin reuniones (excepto con clientes). Reducción de 35% en reuniones internas</li>
+            <li><strong>Protocolo de comunicación asíncrona:</strong> Loom para actualizaciones, Notion para documentación, Slack con horarios definidos</li>
+            <li><strong>Rediseño de roles:</strong> Eliminación de timesheets semanales. Cambio a OKRs trimestrales por proyecto</li>
+            <li><strong>Modelo híbrido flexible:</strong> 40% presencial, 60% remoto. Equipos deciden días según necesidad de colaboración</li>
+            <li><strong>Programa "Regenera":</strong> $500/persona/año para bienestar (gym, terapia, cursos mindfulness, etc.)</li>
+          </ul>
+        </div>
+        
+        <div class="timeline-item">
+          <strong>Trimestre 3-4: Formación de líderes</strong>
+          <ul>
+            <li><strong>Workshop "Liderazgo energético":</strong> 3 jornadas para 18 líderes de proyecto</li>
+            <li><strong>Herramientas:</strong> Check-ins de energía semanales, matriz de carga por persona, protocolo de redistribución</li>
+            <li><strong>KPIs de liderazgo:</strong> eNPS del equipo, rotación, cumplimiento OKRs, índice de burnout</li>
+            <li><strong>Feedback 360°:</strong> Evaluación trimestral de líderes incluyendo gestión de bienestar del equipo</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subsection-title">📈 Resultados Año 1 vs Año 0</div>
+      
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="metric-label">eNPS del personal</div>
+          <div class="metric-value">+15</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs -10 en año 0</div>
+          <div style="font-size:.7rem;color:#6b7280;">Mejora: +25 puntos</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-label">Rotación voluntaria</div>
+          <div class="metric-value">14%</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs 25% en año 0</div>
+          <div style="font-size:.7rem;color:#6b7280;">Ahorro: ~$165K/año</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-label">Burnout alto</div>
+          <div class="metric-value">30%</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs 60% en año 0</div>
+          <div style="font-size:.7rem;color:#6b7280;">Reducción: -50%</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-label">Margen por proyecto</div>
+          <div class="metric-value">22%</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs 18% en año 0</div>
+          <div style="font-size:.7rem;color:#6b7280;">Mejora: +4pp</div>
+        </div>
+      </div>
+
+      <div class="subsection-title">📊 Evolución del Bienestar y Productividad</div>
+      
+      <div class="bar-chart">
+        <div class="bar" style="height: 25%; background: linear-gradient(to top, #ef4444, #dc2626);">
+          <span class="bar-value">-10</span>
+          <span class="bar-label">eNPS<br>Año 0</span>
+        </div>
+        <div class="bar" style="height: 50%;">
+          <span class="bar-value">+2</span>
+          <span class="bar-label">eNPS<br>Trim 2</span>
+        </div>
+        <div class="bar" style="height: 70%;">
+          <span class="bar-value">+9</span>
+          <span class="bar-label">eNPS<br>Trim 3</span>
+        </div>
+        <div class="bar" style="height: 90%;">
+          <span class="bar-value">+15</span>
+          <span class="bar-label">eNPS<br>Trim 4</span>
+        </div>
+      </div>
+
+      <div class="change-highlight">
+        <strong>💡 Hallazgo contraintuitivo:</strong> Al reducir reuniones y dar más autonomía, los proyectos se entregaron 12% más rápido en promedio. El tiempo "liberado" se invirtió en trabajo profundo de mayor valor: arquitectura, revisión de código, documentación. Resultado: menos errores (-38%) y menos retrabajo (-45%).
+      </div>
+
+      <div class="subsection-title">💰 Impacto Financiero y Operativo</div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Métrica</th><th>Año 0 (Baseline)</th><th>Año 1 (Regenerativo)</th><th>Δ Impacto</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Rotación voluntaria (personas)</td>
+              <td>30</td>
+              <td>17</td>
+              <td style="color:#22c55e;">-13 personas</td>
+            </tr>
+            <tr>
+              <td>Costo de reclutamiento/reemplazo</td>
+              <td>$450K</td>
+              <td>$255K</td>
+              <td style="color:#22c55e;">-$195K (-43%)</td>
+            </tr>
+            <tr>
+              <td>Días de ausencia (sick leave)</td>
+              <td>1,850</td>
+              <td>1,120</td>
+              <td style="color:#22c55e;">-730 días (-39%)</td>
+            </tr>
+            <tr>
+              <td>Proyectos entregados a tiempo</td>
+              <td>68%</td>
+              <td>84%</td>
+              <td style="color:#22c55e;">+16pp (+24%)</td>
+            </tr>
+            <tr>
+              <td>NPS de clientes</td>
+              <td>52</td>
+              <td>68</td>
+              <td style="color:#22c55e;">+16 puntos</td>
+            </tr>
+            <tr>
+              <td>Horas de retrabajo por proyecto</td>
+              <td>85h promedio</td>
+              <td>47h promedio</td>
+              <td style="color:#22c55e;">-38h (-45%)</td>
+            </tr>
+            <tr>
+              <td>Tasa de renovación de contratos</td>
+              <td>72%</td>
+              <td>88%</td>
+              <td style="color:#22c55e;">+16pp (+22%)</td>
+            </tr>
+            <tr>
+              <td>Margen operativo (facturación $18M)</td>
+              <td>$3.24M (18%)</td>
+              <td>$3.96M (22%)</td>
+              <td style="color:#22c55e;">+$720K (+22%)</td>
+            </tr>
+            <tr style="background:#1e293b;font-weight:700;">
+              <td>Impacto neto en rentabilidad</td>
+              <td>—</td>
+              <td>—</td>
+              <td style="color:#22c55e;font-size:1.1rem;">+$915K/año</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subsection-title">🔄 Prácticas Sostenidas y Cultura</div>
+      <ul style="margin:.5rem 0;">
+        <li><strong>Check-in semanal de energía:</strong> Escala 1-10 por persona. Si alguien está < 5 por 2 semanas, el líder activa protocolo de soporte</li>
+        <li><strong>Derecho a desconexión:</strong> No se espera respuesta fuera de 9-18h. Emails programados, Slack sin notificaciones nocturnas</li>
+        <li><strong>Sabbatical policy:</strong> Cada 3 años, 4 semanas adicionales de vacaciones pagadas</li>
+        <li><strong>Transparencia de carga:</strong> Dashboard compartido muestra % utilización por persona. Target: 70-80% (no 100%)</li>
+        <li><strong>Feedback bidireccional:</strong> Consultores evalúan a líderes de proyecto trimestralmente. 40% del bono del líder depende de eNPS de su equipo</li>
+        <li><strong>Inversión en bienestar:</strong> $60K/año ($500/persona) + 2 días al año de "wellbeing day" pagados</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. ESG -->
+  <section id="esg" class="section-card">
+    <div class="section-header">
+      <h2>4. ESG como indicador financiero core</h2>
+      <span class="tag">Licencia para operar</span>
+    </div>
+    <p>
+      Integra factores ambientales, sociales y de gobernanza al núcleo financiero, impactando costo de capital, riesgo y valor de mercado, y condicionando la licencia para operar.
+    </p>
+
+    <div class="two-cols">
+      <div>
+        <div class="subsection-title">Estructura de gestión</div>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>Bloque</th><th>Contenido / Ejemplo</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>Propósito</td>
+                <td>Asegurar licencia para operar, mejorar acceso a capital y reducir riesgo regulatorio mediante gestión proactiva de factores ESG materiales.</td>
+              </tr>
+              <tr>
+                <td>Cómo se desarrolla</td>
+                <td>
+                  <ul>
+                    <li>Definir matriz de materialidad con stakeholders.</li>
+                    <li>Integrar métricas ESG en ERP/contabilidad.</li>
+                    <li>Publicar reportes integrados (finanzas + sostenibilidad).</li>
+                    <li>Vincular bonos ejecutivos a metas ESG.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Políticas</td>
+                <td>
+                  <ul>
+                    <li>Política de inversión responsable con umbrales ESG mínimos.</li>
+                    <li>Compras sustentables y requisitos a proveedores.</li>
+                    <li>Compromisos públicos de transparencia ESG.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Cómo se mide</td>
+                <td>
+                  <ul>
+                    <li>Tablero ESG con indicadores clave.</li>
+                    <li>Seguimiento de ratings ESG y condiciones de financiamiento.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>KPIs</td>
+                <td>
+                  <span class="kpi-pill">Huella de carbono (alcances 1,2,3)</span>
+                  <span class="kpi-pill">Diversidad y brecha salarial en alta dirección</span>
+                  <span class="kpi-pill">Score ESG (MSCI, S&amp;P, etc.)</span>
+                  <span class="kpi-pill">WACC y spreads de deuda</span>
+                  <span class="kpi-pill">Acceso a bonos verdes</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div>
+        <div class="subsection-title">Marketing e innovaciones comerciales</div>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>Bloque</th><th>Contenido / Ejemplo</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>Rol del marketing</td>
+                <td>
+                  <ul>
+                    <li>Integrar el relato ESG real en la propuesta de valor y la marca.</li>
+                    <li>Trabajar con Finanzas/Sustentabilidad para comunicar logros ESG creíbles.</li>
+                    <li>Coordinar mensajes ESG coherentes en todos los canales.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Innovaciones comerciales</td>
+                <td>
+                  <ul>
+                    <li>Portafolio “ESG‑ready”: productos con atributos ambientales/sociales claros.</li>
+                    <li>Campañas educativas sobre ahorro de recursos e impacto social.</li>
+                    <li>Servicios complementarios de eficiencia y economía circular.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Plan de acción</td>
+                <td>
+                  <ul>
+                    <li>Traducir materialidad ESG a atributos de productos/servicios.</li>
+                    <li>Rediseñar portafolio y pricing para reflejar valor ESG.</li>
+                    <li>Actualizar guiones de ventas y materiales comerciales con argumentos ESG.</li>
+                    <li>Medir percepción de marca y disposición a pagar por atributos ESG.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>KPIs comerciales</td>
+                <td>
+                  <span class="kpi-pill">% ventas de productos con atributos ESG</span>
+                  <span class="kpi-pill">Prima de precio en portafolio “sostenible”</span>
+                  <span class="kpi-pill">Preferencia de marca en segmentos ESG</span>
+                  <span class="kpi-pill">Mix de ventas y nuevos clientes atraídos</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Caso de estudio ESG -->
+    <h3>Caso de estudio · Embotelladora regional</h3>
+    
+    <div class="case-study-box">
+      <p><strong>🏢 Empresa:</strong> Embotelladora de bebidas, 4 plantas, producción 350M litros/año, facturación $85M, 850 empleados</p>
+      <p><strong>⚠️ Situación inicial:</strong> Críticas públicas por uso intensivo de agua (2.5L agua/1L producto) y residuos plásticos (15% reciclado). Sin diferenciación ESG ante inversores. Financiamiento tradicional con WACC 10%. Presión regulatoria creciente sobre single-use plastic y huella hídrica.</p>
+      
+      <div class="subsection-title">📊 Cambios Internos Implementados (Roadmap 3 años)</div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>Año 1: Diagnóstico y baseline</strong>
+          <ul>
+            <li><strong>Matriz de materialidad:</strong> Workshops con stakeholders (inversores, reguladores, ONG, comunidades). Temas prioritarios: agua, plástico, huella de carbono, empleo local</li>
+            <li><strong>Medición de baseline:</strong> Huella hídrica (875M litros agua/año), huella carbono (42K tCO₂e Scope 1+2, 180K tCO₂e Scope 3), % reciclado (15%)</li>
+            <li><strong>Creación de Comité ESG:</strong> CFO + Dir. Operaciones + Dir. Sustentabilidad (posición nueva) + 2 externos</li>
+            <li><strong>Definición de metas 2025:</strong> Agua -25%, envases reciclados 45%, carbono Scope 1+2 -30%, diversidad liderazgo 40% mujeres</li>
+            <li><strong>Integración a finanzas:</strong> Métricas ESG en ERP, reportes trimestrales al Board junto a P&L</li>
+          </ul>
+        </div>
+        
+        <div class="timeline-item">
+          <strong>Año 2: Inversión y transformación operativa</strong>
+          <ul>
+            <li><strong>Emisión de bono verde:</strong> $12M a 6.5% (vs 9.5% tasa tradicional). Ahorro financiero: $360K/año en intereses</li>
+            <li><strong>Tecnología de eficiencia hídrica:</strong> Sistemas de recirculación en 4 plantas. Inversión $4.5M, payback 4.2 años</li>
+            <li><strong>Línea de envases reciclados:</strong> Inversión $3.2M en maquinaria para procesar rPET (PET reciclado). Capacidad: 80M botellas/año</li>
+            <li><strong>Energía renovable:</strong> Contratos PPA solar (Power Purchase Agreement) para 35% de consumo eléctrico</li>
+            <li><strong>Programa de proveedores sustentables:</strong> Requisitos ESG mínimos para top 20 proveedores (85% del gasto)</li>
+          </ul>
+        </div>
+        
+        <div class="timeline-item">
+          <strong>Año 3: Consolidación y comunicación</strong>
+          <ul>
+            <li><strong>Reporte integrado:</strong> Publicación anual combinando finanzas + ESG según GRI Standards</li>
+            <li><strong>Certificaciones:</strong> ISO 14001 (ambiental), B Corp assessment iniciado</li>
+            <li><strong>Rating ESG:</strong> Evaluación por MSCI, Sustainalytics y S&P ESG Score</li>
+            <li><strong>Productos ESG:</strong> Lanzamiento línea "Eco" con 50% rPET, premium price +8%</li>
+            <li><strong>Bonos ejecutivos:</strong> 20% del bono variable de VP atado a metas ESG</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subsection-title">📈 Resultados Año 3 vs Año 0</div>
+      
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="metric-label">Agua / litro producido</div>
+          <div class="metric-value">1.9L</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs 2.5L en año 0</div>
+          <div style="font-size:.7rem;color:#6b7280;">Reducción: -24% (-210M litros/año)</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-label">% envases reciclados</div>
+          <div class="metric-value">45%</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs 15% en año 0</div>
+          <div style="font-size:.7rem;color:#6b7280;">Mejora: +30pp (126M botellas/año)</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-label">Score ESG (MSCI)</div>
+          <div class="metric-value">72/100</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs 52/100 en año 0</div>
+          <div style="font-size:.7rem;color:#6b7280;">Rating: de "B" a "A"</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-label">WACC estimado</div>
+          <div class="metric-value">8.8%</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs 10% en año 0</div>
+          <div style="font-size:.7rem;color:#6b7280;">Reducción: -120 bps</div>
+        </div>
+      </div>
+
+      <div class="subsection-title">📊 Evolución del Score ESG y Costo de Capital</div>
+      
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;">
+        <div>
+          <p style="font-size:.85rem;font-weight:600;margin-bottom:.5rem;">Score ESG (0-100)</p>
+          <div class="bar-chart" style="height:100px;">
+            <div class="bar" style="height: 52%; background: linear-gradient(to top, #f59e0b, #d97706);">
+              <span class="bar-value">52</span>
+              <span class="bar-label">Año 0</span>
+            </div>
+            <div class="bar" style="height: 62%;">
+              <span class="bar-value">62</span>
+              <span class="bar-label">Año 1</span>
+            </div>
+            <div class="bar" style="height: 68%;">
+              <span class="bar-value">68</span>
+              <span class="bar-label">Año 2</span>
+            </div>
+            <div class="bar" style="height: 72%;">
+              <span class="bar-value">72</span>
+              <span class="bar-label">Año 3</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p style="font-size:.85rem;font-weight:600;margin-bottom:.5rem;">WACC (%)</p>
+          <div class="bar-chart" style="height:100px;">
+            <div class="bar" style="height: 100%; background: linear-gradient(to top, #ef4444, #dc2626);">
+              <span class="bar-value">10.0%</span>
+              <span class="bar-label">Año 0</span>
+            </div>
+            <div class="bar" style="height: 93%;">
+              <span class="bar-value">9.3%</span>
+              <span class="bar-label">Año 1</span>
+            </div>
+            <div class="bar" style="height: 90%;">
+              <span class="bar-value">9.0%</span>
+              <span class="bar-label">Año 2</span>
+            </div>
+            <div class="bar" style="height: 88%; background: linear-gradient(to top, #22c55e, #16a34a);">
+              <span class="bar-value">8.8%</span>
+              <span class="bar-label">Año 3</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="change-highlight">
+        <strong>💡 Efecto cascada financiero:</strong> La mejora del score ESG de 52 a 72 desbloqueó: (1) acceso a bonos verdes con tasa -300 bps, (2) entrada a fondos ESG con $2.4B AUM, (3) renovación de crédito bancario con spread -80 bps por cumplir KPIs sustentables. El WACC bajó de 10% a 8.8%, liberando $1.02M/año en costo de deuda sobre $85M de pasivo.
+      </div>
+
+      <div class="subsection-title">💰 Impacto Financiero y Operativo Integral</div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Métrica</th><th>Año 0</th><th>Año 3</th><th>Δ Impacto</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Consumo agua (millones litros/año)</td>
+              <td>875M</td>
+              <td>665M</td>
+              <td style="color:#22c55e;">-210M L (-24%)</td>
+            </tr>
+            <tr>
+              <td>Costo de agua y tratamiento</td>
+              <td>$2.8M</td>
+              <td>$2.1M</td>
+              <td style="color:#22c55e;">-$700K (-25%)</td>
+            </tr>
+            <tr>
+              <td>Envases reciclados (millones unidades)</td>
+              <td>53M (15%)</td>
+              <td>158M (45%)</td>
+              <td style="color:#22c55e;">+105M (+198%)</td>
+            </tr>
+            <tr>
+              <td>Costo de resina virgen vs rPET</td>
+              <td>$8.5M</td>
+              <td>$7.8M</td>
+              <td style="color:#22c55e;">-$700K (-8%)</td>
+            </tr>
+            <tr>
+              <td>Emisiones CO₂ Scope 1+2 (tCO₂e)</td>
+              <td>42,000</td>
+              <td>29,400</td>
+              <td style="color:#22c55e;">-12,600 (-30%)</td>
+            </tr>
+            <tr>
+              <td>Costo de energía</td>
+              <td>$4.2M</td>
+              <td>$3.6M</td>
+              <td style="color:#22c55e;">-$600K (-14%)</td>
+            </tr>
+            <tr>
+              <td>Ventas línea "Eco" (premium)</td>
+              <td>$0</td>
+              <td>$6.8M (8% de ventas)</td>
+              <td style="color:#22c55e;">+$6.8M nueva línea</td>
+            </tr>
+            <tr>
+              <td>Prima de precio línea Eco</td>
+              <td>—</td>
+              <td>+8% vs estándar</td>
+              <td style="color:#22c55e;">+$510K margen incremental</td>
+            </tr>
+            <tr>
+              <td>Costo de deuda (WACC sobre $85M)</td>
+              <td>$8.5M (10%)</td>
+              <td>$7.48M (8.8%)</td>
+              <td style="color:#22c55e;">-$1.02M (-12%)</td>
+            </tr>
+            <tr>
+              <td>Acceso a capital ESG (fondos)</td>
+              <td>No elegible</td>
+              <td>Elegible ($2.4B AUM)</td>
+              <td style="color:#22c55e;">+$8M captados Año 3</td>
+            </tr>
+            <tr>
+              <td>Multas/sanciones ambientales</td>
+              <td>$85K</td>
+              <td>$0</td>
+              <td style="color:#22c55e;">-$85K (-100%)</td>
+            </tr>
+            <tr>
+              <td>NPS marca (consumidores)</td>
+              <td>38</td>
+              <td>54</td>
+              <td style="color:#22c55e;">+16 puntos (+42%)</td>
+            </tr>
+            <tr style="background:#1e293b;font-weight:700;">
+              <td>Impacto neto EBITDA anual</td>
+              <td>—</td>
+              <td>—</td>
+              <td style="color:#22c55e;font-size:1.1rem;">+$3.91M (+18%)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subsection-title">🔄 Transformación Estratégica y Cultural</div>
+      <ul style="margin:.5rem 0;">
+        <li><strong>ESG integrado a decisiones de inversión:</strong> Todo CAPEX > $500K debe incluir análisis de impacto ESG y retorno social (SROI)</li>
+        <li><strong>Reporte trimestral al Board:</strong> Dashboard ESG con misma prioridad que P&L. Incluye: métricas ambientales, sociales, gobernanza y costo de capital</li>
+        <li><strong>Compensación ejecutiva:</strong> 20% de bono variable de VP+ atado a KPIs ESG (agua, carbono, diversidad)</li>
+        <li><strong>Política de proveedores:</strong> Top 20 proveedores (85% gasto) deben completar cuestionario ESG y alcanzar score mínimo 60/100</li>
+        <li><strong>Innovación de producto:</strong> Pipeline de R&D incluye objetivo: 30% de lanzamientos con atributo sustentable destacado</li>
+        <li><strong>Comunicación externa:</strong> Reporte integrado anual público, participación en CDP Water y Carbon Disclosure Project</li>
+        <li><strong>Licencia social:</strong> Reuniones trimestrales con comunidades cercanas a plantas. Inversión social: 1.5% de utilidad neta</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5. HIPERPERSONALIZACIÓN -->
+  <section id="hiper" class="section-card">
+    <div class="section-header">
+      <h2>5. Hiper‑personalización a escala (Segment of One)</h2>
+      <span class="tag">IA generativa + datos cliente</span>
+    </div>
+    <p>
+      Usa IA generativa y Big Data para tratar a cada cliente como un segmento único, reemplazando segmentación genérica por ofertas y contenidos diseñados individualmente.
+    </p>
+
+    <div class="two-cols">
+      <div>
+        <div class="subsection-title">Estructura de gestión</div>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>Bloque</th><th>Contenido / Ejemplo</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>Propósito</td>
+                <td>Incrementar CLV, conversión y eficiencia de marketing mediante experiencias ultra‑relevantes por cliente.</td>
+              </tr>
+              <tr>
+                <td>Cómo se desarrolla</td>
+                <td>
+                  <ul>
+                    <li>Unificar datos en una CDP con vista 360 del cliente.</li>
+                    <li>Aplicar clustering y modelos de propensión dinámicos.</li>
+                    <li>Generar contenidos personalizados con IA.</li>
+                    <li>Orquestar omnicanalidad según preferencias de cada cliente.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Políticas</td>
+                <td>
+                  <ul>
+                    <li>Política de privacidad y consentimiento claro.</li>
+                    <li>Reglas de frecuencia para evitar saturación.</li>
+                    <li>Revisión ética de segmentaciones y uso de datos.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Cómo se mide</td>
+                <td>
+                  <ul>
+                    <li>Pruebas A/B entre campañas personalizadas vs masivas.</li>
+                    <li>Análisis de cohortes (CLV, churn) con/sin personalización.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>KPIs</td>
+                <td>
+                  <span class="kpi-pill">CLV por cohorte</span>
+                  <span class="kpi-pill">Tasa de conversión campañas personalizadas</span>
+                  <span class="kpi-pill">CAC por segmento y payback</span>
+                  <span class="kpi-pill">Tasa de recompra, cross‑sell y up‑sell</span>
+                  <span class="kpi-pill">Stock obsoleto vs precisión de demanda</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div>
+        <div class="subsection-title">Marketing e innovaciones comerciales</div>
+        <div class="table-wrapper">
+          <table>
+            <thead><tr><th>Bloque</th><th>Contenido / Ejemplo</th></tr></thead>
+            <tbody>
+              <tr>
+                <td>Rol del marketing</td>
+                <td>
+                  <ul>
+                    <li>Diseñar journeys personalizados por segmento, evento y comportamiento.</li>
+                    <li>Trabajar con Data en CDP y modelos de propensión.</li>
+                    <li>Definir reglas de orquestación (frecuencia, exclusión, prioridad de mensajes).</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Innovaciones comerciales</td>
+                <td>
+                  <ul>
+                    <li>CRM avanzado y marketing automation siempre activos.</li>
+                    <li>Cross‑selling y up‑selling inteligente según el ciclo de vida.</li>
+                    <li>Ofertas y creatividades generadas/adaptadas por IA bajo supervisión.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Plan de acción</td>
+                <td>
+                  <ul>
+                    <li>Construir base de clientes unificada (online + offline).</li>
+                    <li>Definir segmentos dinámicos clave y modelos de propensión.</li>
+                    <li>Diseñar journeys de bienvenida, activación y fidelización.</li>
+                    <li>Implementar IA generativa + pruebas A/B continuas.</li>
+                    <li>Establecer gobernanza de datos y ética de personalización.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>KPIs comerciales</td>
+                <td>
+                  <span class="kpi-pill">Lift de conversión vs campañas masivas</span>
+                  <span class="kpi-pill">CLV y churn por cohorte expuesta</span>
+                  <span class="kpi-pill">CAC por segmento</span>
+                  <span class="kpi-pill">% comunicaciones generadas/adaptadas por IA</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Caso de estudio Hiperpersonalización -->
+    <h3>Caso de estudio · Ecommerce omnicanal</h3>
+    
+    <div class="case-study-box">
+      <p><strong>🏢 Empresa:</strong> Retailer omnicanal moda/lifestyle, 380K clientes activos, GMV $28M/año, 45 tiendas físicas + ecommerce</p>
+      <p><strong>⚠️ Situación inicial:</strong> Estrategia de email marketing masiva: mismo mensaje para toda la base de 380K contactos. Resultados: apertura 12%, conversión 1.5%, alta tasa de unsubs (0.8%/campaña). Segmentación básica solo por género. Oportunidad: datos ricos sin explotar (historial compras, navegación web, visitas tienda, preferencias).</p>
+      
+      <div class="subsection-title">📊 Cambios Internos Implementados</div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>Mes 1-2: Construcción de infraestructura de datos</strong>
+          <ul>
+            <li><strong>Implementación CDP (Customer Data Platform):</strong> Segment.io para unificar datos de: ecommerce (Shopify), tiendas físicas (POS), email (Klaviyo), web/app analytics (GA4), CRM (HubSpot)</li>
+            <li><strong>Vista 360° del cliente:</strong> Perfil único con: historial compras online/offline, categorías favoritas, tallas/preferencias, frecuencia, valor, canales preferidos, nivel de engagement</li>
+            <li><strong>Política de datos:</strong> Actualización de privacy policy, consentimiento explícito, control de frecuencia (máx 3 emails/semana)</li>
+            <li><strong>Inversión inicial:</strong> $45K en tecnología (CDP, herramientas IA), $28K en consultoría de implementación</li>
+          </ul>
+        </div>
+        
+        <div class="timeline-item">
+          <strong>Mes 3-4: Segmentación dinámica y modelos predictivos</strong>
+          <ul>
+            <li><strong>Segmentación RFM avanzada:</strong> 12 segmentos dinámicos (Champions, Loyals, At Risk, etc.) actualizados semanalmente</li>
+            <li><strong>Modelos de propensión:</strong> ML para predecir: próxima categoría de compra, churn risk, sensibilidad a descuento, momento óptimo de envío</li>
+            <li><strong>Clustering comportamental:</strong> Identificación de 8 arquetipos de comprador (ej: "Fashionista frecuente", "Cazador de ofertas", "Comprador ocasional lujo")</li>
+            <li><strong>Reglas de orquestación:</strong> Priorización de mensajes, frecuencia por segmento, exclusiones (no enviar promo si compró hace <7 días)</li>
+          </ul>
+        </div>
+        
+        <div class="timeline-item">
+          <strong>Mes 5-6: IA generativa y journeys personalizados</strong>
+          <ul>
+            <li><strong>GPT-4 para copywriting:</strong> Generación automática de asuntos y body de emails adaptados a: arquetipo, historial, contexto. Supervisión humana inicial</li>
+            <li><strong>Recomendaciones 1:1:</strong> Algoritmo de product reco con 6 productos sugeridos por cliente según historial + similitud + tendencias</li>
+            <li><strong>Dynamic content:</strong> Creatividades de email con productos/ofertas específicas por cliente. Template único, contenido dinámico</li>
+            <li><strong>Journeys automatizados:</strong> 15 flujos (bienvenida, abandono carrito, post-compra, reactivación, etc.) con variantes por segmento</li>
+          </ul>
+        </div>
+        
+        <div class="timeline-item">
+          <strong>Mes 7: Piloto A/B en 120K clientes</strong>
+          <ul>
+            <li><strong>Grupo A (60K):</strong> Enfoque masivo tradicional. Mismo mensaje, mismos productos destacados</li>
+            <li><strong>Grupo B (60K):</strong> Hiper-personalización full. Asunto, productos, ofertas, horario de envío personalizados</li>
+            <li><strong>Campaña test:</strong> Promo de temporada (primavera/verano). 4 emails en 3 semanas</li>
+            <li><strong>Métricas tracked:</strong> Open rate, CTR, conversión, ticket, revenue, unsubs, lifetime value proyectado</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subsection-title">📈 Resultados Piloto A/B (3 meses de seguimiento)</div>
+      
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="metric-label">Tasa de apertura</div>
+          <div class="metric-value">22%</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs 12% grupo masivo</div>
+          <div style="font-size:.7rem;color:#6b7280;">Mejora: +83% lift</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-label">Tasa de conversión</div>
+          <div class="metric-value">3.1%</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs 1.5% grupo masivo</div>
+          <div style="font-size:.7rem;color:#6b7280;">Mejora: +107% lift</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-label">Ticket promedio</div>
+          <div class="metric-value">$112</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs $100 grupo masivo</div>
+          <div style="font-size:.7rem;color:#6b7280;">Mejora: +12%</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-label">CLV proyectado (12m)</div>
+          <div class="metric-value">$360</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs $300 grupo masivo</div>
+          <div style="font-size:.7rem;color:#6b7280;">Mejora: +20% ($60)</div>
+        </div>
+      </div>
+
+      <div class="subsection-title">📊 Comparación de Performance Email Marketing</div>
+      
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;">
+        <div>
+          <p style="font-size:.85rem;font-weight:600;margin-bottom:.5rem;">Tasa de Apertura (%)</p>
+          <div class="bar-chart" style="height:100px;">
+            <div class="bar" style="height: 48%; background: linear-gradient(to top, #f59e0b, #d97706);">
+              <span class="bar-value">12%</span>
+              <span class="bar-label">Masivo</span>
+            </div>
+            <div class="bar" style="height: 88%; background: linear-gradient(to top, #22c55e, #16a34a);">
+              <span class="bar-value">22%</span>
+              <span class="bar-label">Personalizado</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p style="font-size:.85rem;font-weight:600;margin-bottom:.5rem;">Tasa de Conversión (%)</p>
+          <div class="bar-chart" style="height:100px;">
+            <div class="bar" style="height: 45%; background: linear-gradient(to top, #f59e0b, #d97706);">
+              <span class="bar-value">1.5%</span>
+              <span class="bar-label">Masivo</span>
+            </div>
+            <div class="bar" style="height: 93%; background: linear-gradient(to top, #22c55e, #16a34a);">
+              <span class="bar-value">3.1%</span>
+              <span class="bar-label">Personalizado</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="change-highlight">
+        <strong>💡 Insight más valioso:</strong> El mayor impacto no fue en la campaña promocional, sino en los journeys automatizados. El flujo de "abandono de carrito" personalizado recuperó 18.3% de carritos vs 7.2% del flujo genérico. Resultado: $43K adicionales/mes solo de ese journey. El flujo de "reactivación" trajo de vuelta al 11% de clientes dormant vs 3% con mensaje masivo.
+      </div>
+
+      <div class="subsection-title">💰 Impacto Financiero Anualizado (proyección post-piloto)</div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Métrica</th><th>Enfoque Masivo (Año 0)</th><th>Hiper-personalización (Año 1)</th><th>Δ Impacto</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Revenue atribuible a email</td>
+              <td>$3.2M (11.4% del GMV)</td>
+              <td>$5.1M (18.2% del GMV)</td>
+              <td style="color:#22c55e;">+$1.9M (+59%)</td>
+            </tr>
+            <tr>
+              <td>Conversión de campañas</td>
+              <td>1.5%</td>
+              <td>3.1%</td>
+              <td style="color:#22c55e;">+1.6pp (+107%)</td>
+            </tr>
+            <tr>
+              <td>Ticket promedio email</td>
+              <td>$100</td>
+              <td>$112</td>
+              <td style="color:#22c55e;">+$12 (+12%)</td>
+            </tr>
+            <tr>
+              <td>Tasa unsubs/campaña</td>
+              <td>0.8%</td>
+              <td>0.3%</td>
+              <td style="color:#22c55e;">-0.5pp (-63%)</td>
+            </tr>
+            <tr>
+              <td>CLV cohorte emails activos</td>
+              <td>$300 (12 meses)</td>
+              <td>$360 (12 meses)</td>
+              <td style="color:#22c55e;">+$60 (+20%)</td>
+            </tr>
+            <tr>
+              <td>Tasa de recompra (90 días)</td>
+              <td>28%</td>
+              <td>38%</td>
+              <td style="color:#22c55e;">+10pp (+36%)</td>
+            </tr>
+            <tr>
+              <td>Cross-sell rate</td>
+              <td>15%</td>
+              <td>27%</td>
+              <td style="color:#22c55e;">+12pp (+80%)</td>
+            </tr>
+            <tr>
+              <td>Churn rate (inactivos >6m)</td>
+              <td>42%</td>
+              <td>31%</td>
+              <td style="color:#22c55e;">-11pp (-26%)</td>
+            </tr>
+            <tr>
+              <td>Costo de tecnología + ops</td>
+              <td>$48K (CDP básico + ESP)</td>
+              <td>$135K (CDP avanzado + IA + equipo)</td>
+              <td style="color:#ef4444;">+$87K</td>
+            </tr>
+            <tr style="background:#1e293b;font-weight:700;">
+              <td>Revenue incremental neto</td>
+              <td>—</td>
+              <td>—</td>
+              <td style="color:#22c55e;font-size:1.1rem;">+$1.81M (+25% ROI)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subsection-title">📊 Distribución de Revenue por Tipo de Journey</div>
+      
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Journey / Flujo</th><th>Revenue Año 1</th><th>% del Total Email</th><th>Mejora vs Masivo</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Abandono de carrito personalizado</td>
+              <td>$1.28M</td>
+              <td>25%</td>
+              <td style="color:#22c55e;">+154% vs flujo genérico</td>
+            </tr>
+            <tr>
+              <td>Reactivación de dormant customers</td>
+              <td>$685K</td>
+              <td>13.4%</td>
+              <td style="color:#22c55e;">+267% vs masivo</td>
+            </tr>
+            <tr>
+              <td>Campañas promocionales segmentadas</td>
+              <td>$1.52M</td>
+              <td>29.8%</td>
+              <td style="color:#22c55e;">+78% vs masivo</td>
+            </tr>
+            <tr>
+              <td>Post-purchase cross-sell</td>
+              <td>$820K</td>
+              <td>16.1%</td>
+              <td style="color:#22c55e;">+185% vs masivo</td>
+            </tr>
+            <tr>
+              <td>Bienvenida y onboarding</td>
+              <td>$420K</td>
+              <td>8.2%</td>
+              <td style="color:#22c55e;">+92% vs masivo</td>
+            </tr>
+            <tr>
+              <td>Otros flujos automatizados</td>
+              <td>$375K</td>
+              <td>7.4%</td>
+              <td style="color:#22c55e;">+45% vs masivo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subsection-title">🔄 Operación Continua y Gobernanza</div>
+      <ul style="margin:.5rem 0;">
+        <li><strong>Test A/B continuo:</strong> 15-20% del tráfico siempre en variante test para optimizar asuntos, timing, productos sugeridos</li>
+        <li><strong>Reentrenamiento de modelos:</strong> Cada 2 semanas se actualizan modelos de propensión con datos frescos. Mejora continua de precisión</li>
+        <li><strong>Supervisión de IA generativa:</strong> Primeros 3 meses: 100% de asuntos revisados por humano. Después: sampling 10% + alertas por keywords sensibles</li>
+        <li><strong>Dashboards en tiempo real:</strong> Looker con métricas de performance por segmento, journey, cohorte. Revisión semanal por equipo de marketing</li>
+        <li><strong>Gobernanza de datos:</strong> Política clara de opt-out, control de frecuencia (máx 3 emails/semana), respeto absoluto a preferencias de canal</li>
+        <li><strong>Expansión omnicanal:</strong> Año 2: llevar personalización a: SMS, push notifications app, recomendaciones en tienda física (tablet vendedores)</li>
+        <li><strong>Equipo dedicado:</strong> 1 Data scientist, 1 Marketing automation specialist, 1 CRM manager, 2 content creators. ROI del equipo: 13.4x</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 6. GERENCIA ESTRATÉGICA INTEGRADA -->
+  <section id="gerencia" class="section-card">
+    <div class="section-header">
+      <h2>6. Gerencia Estratégica Integrada</h2>
+      <span class="tag">Balanced Scorecard + OKRs</span>
+    </div>
+    <p>
+      Unifica planificación estratégica, ejecución operativa y medición de desempeño mediante Balanced Scorecard integrado con OKRs, conectando visión de largo plazo con resultados trimestrales medibles.
+    </p>
+
+    <div class="two-cols">
+      <!-- Estructura de gestión -->
+      <div>
+        <div class="subsection-title">Estructura de gestión</div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Bloque</th><th>Contenido / Ejemplo</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Propósito</td>
+                <td>Alinear todas las áreas de la empresa hacia objetivos estratégicos medibles, asegurando que cada iniciativa contribuye a resultados financieros y no financieros clave.</td>
+              </tr>
+              <tr>
+                <td>Cómo se desarrolla</td>
+                <td>
+                  <ul>
+                    <li>Definición de visión, misión y objetivos estratégicos a 3-5 años.</li>
+                    <li>Diseño de Balanced Scorecard con 4 perspectivas: Financiera, Cliente, Procesos, Aprendizaje.</li>
+                    <li>Cascadeo de BSC corporativo a unidades de negocio y departamentos.</li>
+                    <li>Traducción de objetivos estratégicos a OKRs trimestrales medibles.</li>
+                    <li>Implementación de software de gestión estratégica (Cascade, Perdoo, etc.).</li>
+                    <li>Ciclos de revisión: semanal (equipo), mensual (dirección), trimestral (board).</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Políticas</td>
+                <td>
+                  <ul>
+                    <li>Todo proyecto > $50K debe vincularse a un objetivo estratégico del BSC.</li>
+                    <li>OKRs establecidos al inicio de cada trimestre con máx 3-5 objetivos por área.</li>
+                    <li>Check-ins semanales de avance de Key Results con semáforo (verde/amarillo/rojo).</li>
+                    <li>Bonos ejecutivos atados 60% a resultados financieros + 40% a OKRs estratégicos.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Cómo se mide</td>
+                <td>
+                  <ul>
+                    <li>Dashboard corporativo con indicadores BSC actualizados en tiempo real.</li>
+                    <li>Scorecards por área mostrando cumplimiento de OKRs (meta: 70-80% logro).</li>
+                    <li>Análisis de varianza estratégica: qué objetivos se están logrando y cuáles no.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>KPIs</td>
+                <td>
+                  <span class="kpi-pill">% OKRs logrados por trimestre (target 70-80%)</span>
+                  <span class="kpi-pill">Alineación estratégica (% iniciativas vinculadas a BSC)</span>
+                  <span class="kpi-pill">Velocidad de ejecución (días para implementar decisión)</span>
+                  <span class="kpi-pill">ROI de iniciativas estratégicas</span>
+                  <span class="kpi-pill">Engagement de equipos con proceso estratégico</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Marketing e innovación comercial -->
+      <div>
+        <div class="subsection-title">Marketing e innovaciones comerciales</div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr><th>Bloque</th><th>Contenido / Ejemplo</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Rol del marketing</td>
+                <td>
+                  <ul>
+                    <li>Diseñar objetivos comerciales alineados con perspectiva Cliente del BSC.</li>
+                    <li>Definir OKRs de marketing con KRs medibles: leads, conversión, CAC, LTV.</li>
+                    <li>Participar en QBRs estratégicos reportando avance y pivotes necesarios.</li>
+                    <li>Co-crear iniciativas cross-funcionales con Ventas, Producto y Operaciones.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Innovaciones comerciales</td>
+                <td>
+                  <ul>
+                    <li>Marketing basado en OKRs con ciclos trimestrales de planificación.</li>
+                    <li>Customer Journey Mapping vinculado a métricas de perspectiva Cliente.</li>
+                    <li>Account-Based Marketing (ABM) para cuentas estratégicas clave.</li>
+                    <li>Revenue Operations (RevOps) unificando Marketing, Ventas y CS.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>Plan de acción</td>
+                <td>
+                  <ul>
+                    <li>Mapear objetivos estratégicos y traducirlos a OKRs de marketing.</li>
+                    <li>Implementar dashboard unificado (HubSpot, Salesforce, Looker).</li>
+                    <li>Establecer rituales: planning trimestral, check-ins semanales, retrospectivas.</li>
+                    <li>Capacitar equipos en metodología OKR y pensamiento estratégico.</li>
+                    <li>Definir métricas norte (North Star Metric) y métricas de soporte.</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td>KPIs comerciales</td>
+                <td>
+                  <span class="kpi-pill">% logro OKRs comerciales trimestrales</span>
+                  <span class="kpi-pill">Pipeline generado vs objetivo</span>
+                  <span class="kpi-pill">Velocidad de conversión (días)</span>
+                  <span class="kpi-pill">NPS y Customer Health Score</span>
+                  <span class="kpi-pill">Marketing ROI por canal e iniciativa</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Caso de estudio Gerencia Estratégica -->
+    <h3>Caso de estudio · Empresa manufacturera B2B</h3>
+    
+    <div class="case-study-box">
+      <p><strong>🏢 Empresa:</strong> Fabricante de componentes industriales, 3 plantas, 450 empleados, facturación $62M/año, 180 clientes B2B</p>
+      <p><strong>⚠️ Situación inicial:</strong> Plan estratégico elaborado anualmente pero desconectado de la operación diaria. Cada departamento trabajaba con sus propias metas sin visibilidad de impacto en objetivos corporativos. Resultado: 40% de iniciativas no se completaban, duplicación de esfuerzos y falta de claridad sobre prioridades. Reuniones de seguimiento esporádicas sin datos consistentes.</p>
+      
+      <div class="subsection-title">📊 Cambios Internos Implementados</div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>Trimestre 1: Diseño del sistema estratégico</strong>
+          <ul>
+            <li><strong>Workshop estratégico:</strong> 3 días con equipo directivo (CEO + 8 VPs). Facilitador externo especializado en BSC</li>
+            <li><strong>Definición de visión 2028:</strong> "Ser el proveedor #1 en calidad y servicio en componentes industriales del sector automotriz"</li>
+            <li><strong>Diseño de BSC corporativo:</strong> 4 perspectivas con 12 objetivos estratégicos y 28 KPIs (7 por perspectiva)</li>
+            <li><strong>Mapas estratégicos:</strong> Relaciones causa-efecto entre objetivos de las 4 perspectivas</li>
+            <li><strong>Selección de tecnología:</strong> Implementación de Cascade Strategy para gestión de BSC y OKRs</li>
+          </ul>
+        </div>
+        
+        <div class="timeline-item">
+          <strong>Trimestre 2: Cascadeo y OKRs</strong>
+          <ul>
+            <li><strong>BSC por departamento:</strong> Operaciones, Comercial, Finanzas, Calidad, RRHH, TI. Cada uno con 3-4 objetivos alineados al corporativo</li>
+            <li><strong>Traducción a OKRs Q2:</strong> Cada objetivo del BSC se desglosa en 1-2 OKRs medibles con 3-5 Key Results</li>
+            <li><strong>Capacitación:</strong> 4 sesiones de 3 horas para 45 líderes en metodología OKR, medición y accountability</li>
+            <li><strong>Definición de rituales:</strong> Check-ins semanales (lunes), Mid-Quarter Reviews (semana 6), QBRs (fin trimestre)</li>
+            <li><strong>Dashboard corporativo:</strong> 1 pantalla con 12 objetivos estratégicos, semáforo de avance, tendencias</li>
+          </ul>
+        </div>
+        
+        <div class="timeline-item">
+          <strong>Trimestre 3-4: Ejecución y ajustes</strong>
+          <ul>
+            <li><strong>Check-ins semanales:</strong> 30 min por equipo. Actualización de KRs, identificación de blockers, pedido de ayuda cross-funcional</li>
+            <li><strong>Mid-Quarter Review:</strong> Análisis de proyección de logro. Si OKR < 40% a mitad de trimestre, se decide: pivotar, reforzar o cancelar</li>
+            <li><strong>QBR ejecutivo:</strong> Día completo cada 3 meses. Revisión de logro, celebración, retrospectiva, planning Q siguiente</li>
+            <li><strong>Ajustes del sistema:</strong> Reducción de KPIs de 28 a 20 (eliminar redundantes). Simplificación de reportes</li>
+            <li><strong>Vinculación a compensación:</strong> A partir de Q4, bono variable atado 60% financiero + 40% logro OKRs</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="subsection-title">📈 Resultados Año 1 vs Año 0</div>
+      
+      <div class="metric-grid">
+        <div class="metric-card">
+          <div class="metric-label">% OKRs logrados (target 70%)</div>
+          <div class="metric-value">74%</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs 42% iniciativas completadas año 0</div>
+          <div style="font-size:.7rem;color:#6b7280;">Mejora: +76% en ejecución</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-label">Alineación estratégica</div>
+          <div class="metric-value">89%</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs 35% proyectos alineados año 0</div>
+          <div style="font-size:.7rem;color:#6b7280;">154% más iniciativas estratégicas</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-label">Tiempo decisión → acción</div>
+          <div class="metric-value">8 días</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs 28 días año 0</div>
+          <div style="font-size:.7rem;color:#6b7280;">Reducción: -71%</div>
+        </div>
+        
+        <div class="metric-card">
+          <div class="metric-label">Engagement equipos (eNPS)</div>
+          <div class="metric-value">+22</div>
+          <div style="font-size:.75rem;color:#94a3b8;">vs -5 año 0</div>
+          <div style="font-size:.7rem;color:#6b7280;">Equipos más enfocados</div>
+        </div>
+      </div>
+
+      <div class="subsection-title">📊 Balanced Scorecard - Evolución de Perspectivas</div>
+      
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;">
+        <div>
+          <p style="font-size:.85rem;font-weight:600;margin-bottom:.5rem;">Logro de Objetivos por Perspectiva (%)</p>
+          <div class="bar-chart" style="height:120px;">
+            <div class="bar" style="height: 78%;">
+              <span class="bar-value">78%</span>
+              <span class="bar-label">Financiera</span>
+            </div>
+            <div class="bar" style="height: 72%;">
+              <span class="bar-value">72%</span>
+              <span class="bar-label">Cliente</span>
+            </div>
+            <div class="bar" style="height: 74%;">
+              <span class="bar-value">74%</span>
+              <span class="bar-label">Procesos</span>
+            </div>
+            <div class="bar" style="height: 71%;">
+              <span class="bar-value">71%</span>
+              <span class="bar-label">Aprendizaje</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p style="font-size:.85rem;font-weight:600;margin-bottom:.5rem;">Evolución Trimestral - Logro Global OKRs</p>
+          <div class="bar-chart" style="height:120px;">
+            <div class="bar" style="height: 55%; background: linear-gradient(to top, #f59e0b, #d97706);">
+              <span class="bar-value">55%</span>
+              <span class="bar-label">Q1</span>
+            </div>
+            <div class="bar" style="height: 68%;">
+              <span class="bar-value">68%</span>
+              <span class="bar-label">Q2</span>
+            </div>
+            <div class="bar" style="height: 76%;">
+              <span class="bar-value">76%</span>
+              <span class="bar-label">Q3</span>
+            </div>
+            <div class="bar" style="height: 82%;">
+              <span class="bar-value">82%</span>
+              <span class="bar-label">Q4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="change-highlight">
+        <strong>💡 Transformación clave:</strong> El cambio cultural más importante fue pasar de "cumplir el plan anual" a "lograr objetivos trimestrales ambiciosos". En Q1, el equipo fijó OKRs conservadores (55% logro). En Q2-Q4, con confianza creciente, fijaron metas stretch y lograron 68-82%. El sistema OKR enseñó que fallar en 20-30% de un objetivo ambicioso es mejor que lograr 100% de un objetivo mediocre.
+      </div>
+
+      <div class="subsection-title">💰 Impacto Financiero y Operativo</div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Métrica</th><th>Año 0 (Sin BSC/OKR)</th><th>Año 1 (Con Gerencia Estratégica)</th><th>Δ Impacto</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Facturación</td>
+              <td>$62M</td>
+              <td>$71.3M</td>
+              <td style="color:#22c55e;">+$9.3M (+15%)</td>
+            </tr>
+            <tr>
+              <td>Margen EBITDA</td>
+              <td>12% ($7.44M)</td>
+              <td>15.5% ($11.05M)</td>
+              <td style="color:#22c55e;">+$3.61M (+48.5%)</td>
+            </tr>
+            <tr>
+              <td>NPS clientes</td>
+              <td>38</td>
+              <td>58</td>
+              <td style="color:#22c55e;">+20 puntos (+53%)</td>
+            </tr>
+            <tr>
+              <td>On-Time Delivery (OTD)</td>
+              <td>78%</td>
+              <td>92%</td>
+              <td style="color:#22c55e;">+14pp (+18%)</td>
+            </tr>
+            <tr>
+              <td>Defectos por millón (PPM)</td>
+              <td>1,850</td>
+              <td>680</td>
+              <td style="color:#22c55e;">-1,170 (-63%)</td>
+            </tr>
+            <tr>
+              <td>Ciclo de innovación (nuevos productos)</td>
+              <td>18 meses</td>
+              <td>11 meses</td>
+              <td style="color:#22c55e;">-7 meses (-39%)</td>
+            </tr>
+            <tr>
+              <td>Rotación de talento clave</td>
+              <td>18%</td>
+              <td>9%</td>
+              <td style="color:#22c55e;">-9pp (-50%)</td>
+            </tr>
+            <tr>
+              <td>% iniciativas completadas</td>
+              <td>42%</td>
+              <td>74%</td>
+              <td style="color:#22c55e;">+32pp (+76%)</td>
+            </tr>
+            <tr>
+              <td>Tiempo promedio de decisión</td>
+              <td>28 días</td>
+              <td>8 días</td>
+              <td style="color:#22c55e;">-20 días (-71%)</td>
+            </tr>
+            <tr>
+              <td>Inversión en sistema estratégico</td>
+              <td>$0</td>
+              <td>$185K (software + consultoría + capacitación)</td>
+              <td style="color:#ef4444;">-$185K</td>
+            </tr>
+            <tr style="background:#1e293b;font-weight:700;">
+              <td>ROI del sistema estratégico</td>
+              <td>—</td>
+              <td>—</td>
+              <td style="color:#22c55e;font-size:1.1rem;">19.5x ($3.61M / $185K)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subsection-title">📋 Ejemplos de OKRs por Perspectiva BSC</div>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr><th>Perspectiva</th><th>Objetivo BSC</th><th>OKR Trimestral (Ejemplo Q3)</th><th>Logro</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>💰 Financiera</td>
+              <td>Aumentar rentabilidad</td>
+              <td><strong>O:</strong> Mejorar margen EBITDA<br><strong>KR1:</strong> Reducir costos operativos 8%<br><strong>KR2:</strong> Aumentar facturación $2.5M<br><strong>KR3:</strong> Mejorar días de cobro a 45</td>
+              <td style="color:#22c55e;">78%</td>
+            </tr>
+            <tr>
+              <td>👥 Cliente</td>
+              <td>Excelencia en servicio</td>
+              <td><strong>O:</strong> Elevar satisfacción de clientes clave<br><strong>KR1:</strong> NPS de 38 a 52<br><strong>KR2:</strong> OTD de 82% a 90%<br><strong>KR3:</strong> Reducir quejas 40%</td>
+              <td style="color:#22c55e;">72%</td>
+            </tr>
+            <tr>
+              <td>⚙️ Procesos</td>
+              <td>Calidad de clase mundial</td>
+              <td><strong>O:</strong> Reducir defectos de producción<br><strong>KR1:</strong> PPM de 1,200 a 800<br><strong>KR2:</strong> First Pass Yield 92% a 96%<br><strong>KR3:</strong> Certificación ISO 9001</td>
+              <td style="color:#22c55e;">74%</td>
+            </tr>
+            <tr>
+              <td>📚 Aprendizaje</td>
+              <td>Equipo de alto desempeño</td>
+              <td><strong>O:</strong> Desarrollar capacidades clave<br><strong>KR1:</strong> 100% líderes certificados Lean Six Sigma<br><strong>KR2:</strong> eNPS de +8 a +18<br><strong>KR3:</strong> Reducir rotación talento clave a <10%</td>
+              <td style="color:#22c55e;">71%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="subsection-title">🔄 Sistema de Gestión Estratégica Sostenido</div>
+      <ul style="margin:.5rem 0;">
+        <li><strong>Rituales semanales:</strong> Lunes 9am - Check-in de 30 min por equipo. Actualización de KRs, blockers, ayuda necesaria. Asistencia >95%</li>
+        <li><strong>Mid-Quarter Review:</strong> Semana 6 de cada trimestre. Análisis de proyección. Decisión: seguir, pivotar o cancelar OKRs en riesgo</li>
+        <li><strong>QBR (Quarterly Business Review):</strong> Día completo de retrospectiva + celebración + planning. CEO + VPs + 20 gerentes clave</li>
+        <li><strong>Dashboard siempre visible:</strong> Pantallas en áreas comunes con BSC corporativo y avance de OKRs. Actualización automática</li>
+        <li><strong>Transparencia total:</strong> Todos los colaboradores acceden al dashboard estratégico. Entienden cómo su trabajo impacta objetivos</li>
+        <li><strong>Compensación variable:</strong> VP+ tienen 60% bono en métricas financieras + 40% en logro de OKRs estratégicos de su área</li>
+        <li><strong>Cultura de accountability:</strong> Equipos se auto-organizan para lograr OKRs. Ownership distribuido. Menos dependencia de jerarquía</li>
+        <li><strong>Mejora continua del sistema:</strong> Retrospectivas trimestrales del proceso estratégico. "¿Qué mejorar en el sistema de OKRs?"</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- RESUMEN -->
+  <section id="resumen" class="section-card">
+    <h2>Resumen comparativo de las 6 innovaciones</h2>
+    <p>
+      La tabla resume el paso del enfoque tradicional al enfoque 2025 y el impacto financiero principal en cada pilar.
+    </p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Pilar</th>
+            <th>Enfoque tradicional</th>
+            <th>Enfoque 2025</th>
+            <th>Impacto financiero principal</th>
+            <th>Caso de Estudio - Impacto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Decisiones</td>
+            <td>Intuición + hojas de cálculo (BI pasivo).</td>
+            <td>Decision Intelligence (IA + humano).</td>
+            <td>Mayor velocidad y precisión, menor riesgo de decisión.</td>
+            <td style="color:#22c55e;font-weight:600;">Retail: +$788K EBITDA/año</td>
+          </tr>
+          <tr>
+            <td>Estrategia</td>
+            <td>Planes anuales rígidos.</td>
+            <td>Estrategia dinámica con rolling forecasts.</td>
+            <td>Adaptabilidad de cash flow y menos financiamiento de emergencia.</td>
+            <td style="color:#22c55e;font-weight:600;">SaaS: +$2.8M ARR, EBITDA 18%→26%</td>
+          </tr>
+          <tr>
+            <td>Liderazgo</td>
+            <td>Control horario y presencialismo.</td>
+            <td>Liderazgo regenerativo e híbrido.</td>
+            <td>Mayor productividad y menor rotación de talento.</td>
+            <td style="color:#22c55e;font-weight:600;">Consultora: +$915K/año</td>
+          </tr>
+          <tr>
+            <td>Sostenibilidad</td>
+            <td>RSE filantrópica, separada de finanzas.</td>
+            <td>ESG como eje financiero central.</td>
+            <td>Reducción del WACC y mejor acceso a capital.</td>
+            <td style="color:#22c55e;font-weight:600;">Embotelladora: +$3.91M EBITDA (+18%)</td>
+          </tr>
+          <tr>
+            <td>Cliente</td>
+            <td>Segmentación demográfica amplia.</td>
+            <td>Hiper‑personalización (segment of one).</td>
+            <td>Mayor CLV y menor CAC.</td>
+            <td style="color:#22c55e;font-weight:600;">Ecommerce: +$1.81M Revenue</td>
+          </tr>
+          <tr>
+            <td>Gerencia</td>
+            <td>Plan estratégico anual desconectado de ejecución.</td>
+            <td>BSC integrado con OKRs trimestrales.</td>
+            <td>Alineación estratégica y velocidad de ejecución.</td>
+            <td style="color:#22c55e;font-weight:600;">Manufactura: +$3.61M EBITDA, ROI 19.5x</td>
+          </tr>
+          <tr style="background:#1e293b;font-weight:700;">
+            <td colspan="4" style="text-align:right;font-size:1.1rem;padding-right:1rem;">IMPACTO TOTAL DOCUMENTADO:</td>
+            <td style="color:#22c55e;font-size:1.3rem;">+$13.8M</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    Innovaciones en Gerencia Estratégica y Administración · Visión 2025
+  </footer>
+
+</main>
+</body>
+</html>
